@@ -1,0 +1,35 @@
+<div data-modal class="modal modal_callback">
+	<div class="modal__content">
+		<div class="modal__body">
+			<button class="modal__close">
+				<svg>
+					<use xlink:href="sprite.svg#close"></use>
+				</svg>
+			</button>
+			<form action="#" class="online__form online-form form">
+				<h3 class="online-form__title">Заполните форму, и мы Вам позвоним
+				</h3>
+				<div class="online-form__body">
+					<div class="online-form__line">
+						<label for="formName4" class="form__label">Введите Ваше имя</label>
+						<input id="formName4" autocomplete="off" type="text" name="form[name]" data-error=""
+							data-value="Например, Алексей" class="online-form__input input _req">
+					</div>
+					<div class="online-form__line">
+						<label for="formTel4" class="form__label">Введите Ваш телефон</label>
+						<input id="formTel4" autocomplete="off" type="text" name="form[phone]" data-error=""
+							data-value="+7 (___) __-__-__" class="online-form__input input _phone _req">
+					</div>
+					<div class="online-form__line online-form__line_btn">
+						<button type="submit" class="form__input form__btn btn">Позвоните мне</button>
+					</div>
+					<div class="online-form__line agreement">
+						<div class="agreement__text">Нажимая на&nbsp;кнопку, вы даёте согласие на&nbsp;обработку
+							персональных данных и соглашаетесь c <a href="#">политикой
+								конфиденциальности</a></div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

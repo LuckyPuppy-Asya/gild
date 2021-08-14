@@ -1,0 +1,369 @@
+.intro {
+	position: relative;
+	// .intro__bg
+	&__bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+	// .intro__container
+	&__container {
+		padding: 186px 15px 141px 15px;
+		position: relative;
+		z-index: 5;
+		@media (max-width: $md1+px) {
+			padding: 132px 15px 0px 15px;
+		}
+		@media (max-width: $md4+px) {
+			padding: 144px 15px 0px 15px;
+		}
+	}
+	// .intro__image
+	&__image {
+		img {
+			object-fit: contain;
+		}
+		@media (min-width: $md1+px) {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			transform: translate(17.5%, 0px);
+			width: math.div(525, 1200) * 100%;
+			padding: 0px 0px 65% 0px;
+		}
+		@media (max-width: $md1+px) {
+			width: 100%;
+			padding: 0px 0px 122% 0px;
+		}
+		@media (max-width: $md3+px) {
+			width: 70%;
+			padding: 0px 0px 85% 0px;
+			margin: 0px auto;
+		}
+		@media (max-width: $md4+px) {
+			width: 89%;
+			padding: 0px 0px 109% 0px;
+			margin: 0px auto;
+		}
+	}
+	// .intro__master
+	&__master {
+	}
+	// .intro__title
+	&__title {
+		@include adaptiv-value("padding-top", 68, 30, 1);
+		max-width: 750px;
+		margin: 0px 0px 21px 0px;
+		span {
+			text-decoration: underline;
+			-webkit-text-decoration-color: $greenColor; /* safari still uses vendor prefix */
+			text-decoration-color: $greenColor;
+			position: relative;
+			&::after {
+				content: "";
+				position: absolute;
+				right: -10px;
+				top: 5px;
+				width: 16px;
+				height: 16px;
+				background: url("../img/tippy-big.png") no-repeat;
+			}
+		}
+	}
+	// .intro__subtitle
+	&__subtitle {
+		max-width: 720px;
+		@include adaptiv-value("font-size", 32, 15, 1);
+		line-height: 120%;
+		letter-spacing: 0.03em;
+		color: #717275;
+		margin: 0px 0px 59px 0px;
+		span {
+			color: $greenColor;
+			position: relative;
+			&::after {
+				content: "";
+				position: absolute;
+				right: -10px;
+				top: 5px;
+				width: 13px;
+				height: 13px;
+				background: url("../img/tippy-light.png") no-repeat;
+			}
+		}
+	}
+	// .intro__pros
+	&__pros {
+		margin: 0px 0px 70px 0px;
+		@media (max-width: $md1+px) {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+	// .intro__case
+	&__case {
+		display: flex;
+		@media (max-width: $md3+px) {
+			flex-wrap: wrap;
+		}
+		@media (max-width: $md3+px) {
+			padding: 0px 0px 21px 0px;
+		}
+	}
+	// .intro__left
+	&__left {
+		@media (max-width: $md1+px) {
+			flex: 0 1 65%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		@media (max-width: $md3+px) {
+			flex: 1 1 100%;
+		}
+		@media (max-width: $md3+px) {
+			order: 2;
+			border: 1px solid rgba(170, 170, 170, 0.5);
+			border-radius: 7px;
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0.22) 0%, rgba(254, 255, 251, 0.1562) 100%);
+			/* Если браузер поддерживает backdrop-filter */
+			@supports ((-webkit-backdrop-filter: blur(22px)) or (backdrop-filter: blur(22px))) {
+				background: rgba(255, 255, 255, 0.72);
+				backdrop-filter: blur(22px);
+			}
+			padding: 21px 14px;
+		}
+	}
+	// .intro__right
+	&__right {
+		@media (max-width: $md1+px) {
+			flex: 0 1 35%;
+			align-self: flex-end;
+		}
+
+		@media (max-width: $md3+px) {
+			flex: 1 1 100%;
+		}
+		@media (max-width: $md3+px) {
+			order: 1;
+		}
+	}
+	// .intro__dream
+	&__dream {
+		font-weight: 700;
+		@include adaptiv-value("font-size", 18, 12, 1);
+		line-height: 118%;
+		color: #717275;
+		padding: 0px 0px 0px 53px;
+		@include adaptiv-value("margin-bottom", 27, 18, 1);
+		position: relative;
+		span {
+			color: $yellowColor;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 6px;
+			width: 55px;
+			height: 39px;
+			background: url("../img/svg/curved-arrow.svg") 0 0 no-repeat;
+		}
+		@media (max-width: $md3+px) {
+			padding: 0px 0px 0px 36px;
+			&::before {
+				left: -5px;
+				top: 25px;
+				transform: rotate(-46.89deg);
+			}
+		}
+	}
+	// .intro__count
+	&__count {
+		display: flex;
+	}
+	// .intro__button
+	&__button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		@include adaptiv-value("padding-right", 67, 35, 1);
+		@include adaptiv-value("padding-left", 67, 35, 1);
+		background-color: $yellowColor;
+		@include adaptiv-value("border-radius", 43, 24, 1);
+		font-weight: 700;
+		text-transform: uppercase;
+		@include adaptiv-value("font-size", 20, 11, 1);
+		color: #fffcee;
+		line-height: 112%;
+		@include adaptiv-value("height", 88, 49, 1);
+		text-align: center;
+		transition: all 0.3s ease 0s;
+		margin: 0px 41px 0px 0px;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #bb4949;
+			}
+		}
+		@media (max-width: $md1+px) {
+			margin: 0px 0px 0px 0px;
+		}
+		@media (max-width: $md3+px) {
+			margin: 0px auto;
+		}
+	}
+	// .intro__points
+	&__points {
+		@include adaptiv-value("margin-bottom", 60, 21, 1);
+	}
+	// .intro__point
+	&__point {
+		font-size: 16px;
+		line-height: 112%;
+		color: #717275;
+		position: relative;
+		padding: 0px 0px 0px 18px;
+		&:not(:last-child) {
+			margin: 0px 0px 18px 0px;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 4px;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			border: 2px solid $yellowColor;
+		}
+		@media (max-width: $md3+px) {
+			font-size: 12px;
+			padding: 0px 0px 0px 13px;
+			&:not(:last-child) {
+				margin: 0px 0px 7px 0px;
+			}
+			&::before {
+				width: 6px;
+				height: 6px;
+			}
+		}
+	}
+}
+.master {
+	position: absolute;
+	left: 50%;
+	transform: translate(-60%, 0px);
+	bottom: 190px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	@media (max-width: $md1+px) {
+		bottom: 20px;
+	}
+	@media (max-width: $md3+px) {
+		@include adaptiv-value("bottom", 150, 20, 1);
+	}
+	// .master__name
+	&__name {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include adaptiv-value("width", 215, 140, 1);
+		@include adaptiv-value("height", 45, 29, 1);
+		background: linear-gradient(136.27deg, #f3cd82 15.69%, #e0a93d 86.04%);
+		@include adaptiv-value("border-radius", 7, 5, 1);
+		font-weight: 700;
+		@include adaptiv-value("font-size", 18, 12, 1);
+		line-height: 119%;
+		color: #ffffff;
+		transform: translate(0, 50%);
+		position: relative;
+		z-index: 3;
+	}
+	// .master__position
+	&__position {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		@include adaptiv-value("width", 275, 179, 1);
+		@include adaptiv-value("height", 100, 65, 1);
+		@include adaptiv-value("border-radius", 7, 5, 1);
+		border: 1px solid $yellowColor;
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.84) 0%, rgba(254, 255, 251, 0.5964) 100%);
+		/* Если браузер поддерживает backdrop-filter */
+		@supports ((-webkit-backdrop-filter: blur(6px)) or (backdrop-filter: blur(6px))) {
+			background: rgba(255, 255, 255, 0.72);
+			backdrop-filter: blur(6px);
+		}
+		@include adaptiv-value("font-size", 18, 12, 1);
+		line-height: 140%;
+		text-align: center;
+
+		span {
+			font-weight: 700;
+			color: #575b5e;
+		}
+	}
+}
+.pros {
+	max-width: 823px;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.44) 0%, #f5f5f5 100%);
+	border-radius: 7px;
+	display: flex;
+	align-items: center;
+	// .pros__column
+	&__column {
+		flex: 0 1 33.333%;
+		&:not(:last-child) {
+			border-right: 0.4px solid rgba(218, 232, 228, 0.9);
+		}
+	}
+	// .pros__item
+	&__item {
+		padding: 28px 14px 23px 14px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	// .pros__image
+	&__image {
+		flex: 0 0 85px;
+		width: 85px;
+		height: 70px;
+		margin: 0px 6px 0px 0px;
+		&_bigger {
+			flex: 0 0 112px;
+			width: 112px;
+		}
+	}
+	// .pros__title
+	&__title {
+		// flex: 0 0 157px;
+		font-size: 16px;
+		line-height: 125%;
+		color: #575b5e;
+		span.pros__tippy {
+			position: relative;
+		}
+		span.pros__bold {
+			font-weight: 700;
+		}
+		span.pros__tippy::after {
+			content: "";
+			position: absolute;
+			right: -25px;
+			top: 6px;
+			width: 12px;
+			height: 12px;
+			background: url("../img/tippy.png") no-repeat;
+		}
+	}
+}
+.next {
+	height: 600px;
+	background-color: pink;
+}

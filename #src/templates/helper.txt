@@ -1,0 +1,89 @@
+
+если подключаю сторонние шрифты (не через Google Fonts) или иконочный шрифт:
+в папке #src создаю папку fonts, туда файлы с форматами ttf или otf, gulp преобразует в woff или woff2
+в папке scss должна быть ПУСТАЯ папка fonts.scss
+Если она не пустая, то автоматического подключения этих шрифтов через галп не будет (см функцию fontstyle() в gulpfile.js)
+
+Ну и помни про подключение в style.scss:
+@import "fonts"; для сторонних шрифтов или иконочного шрифта, если они есть
+@import "icons"; для иконочного шрифта, если есть
+
+Ну и про иконочный шрифт. Кроме помещения файла.ttf в fonts, из файл.css классы типа 
+._icon-arrow-left:before {
+	content: "\e905";
+	font-size: 39px;
+	color: #acacac;
+}
+помещаю в icons.scss
+
+=====================
+это не надо
+	<div class="cards__column" ontouchstart="this.classList.toggle('hover');">...</div>
+
+=====================
+
+для валидации пароля в инпуте добавить класс .form__viewpass и установить type="password" при клике
+на инпут с паролем к инпуту добавляется класс active и меняется тип поля на text при
+повторном клике меняется на password
+
+===================================
+
+.fade {
+		display: none;
+		animation-name: fade;
+		animation-duration: 1s;
+		&--visible {
+			display: block;
+		}
+	}
+
+@keyframes fade {
+	0% {
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+===================================
+Качалась иконка телефона в charger
+
+@keyframes rotate {
+	0% {
+		transform: rotate(25deg);
+	}
+	25% {
+		transform: rotate(-25deg);
+	}
+	50% {
+		transform: rotate(25deg);
+	}
+	75% {
+		transform: rotate(-25deg);
+	}
+	100% {
+		transform: rotate(25deg);
+	}
+}
+==================================
+if (isMobile.any()) {
+	document.body.classList.add('_touch');
+} else {
+	document.body.classList.add('_pc');
+}
+==========================================
+
+/* Если браузер поддерживает backdrop-filter */
+		@supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
+			background: rgba(255, 255, 255, 0.72);
+			backdrop-filter: blur(31px);
+		}
+==================================================
+Чтобы обрезать текст...
+-webkit-line-clamp: 4; это 4 строки а дальше обрезать
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		//========================================================================================================================================================
+		

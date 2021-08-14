@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+
+		<main class="page">
+			<section class="page__intro intro">
+				<div class="intro__bg _ibg">
+					<img src="img/intro/bg.png" alt="">
+				</div>
+				@@include('_header.html',{})
+				<div class="intro__container _container">
+					<div data-da=".intro__right,1212,0" class="intro__image _ibg">
+						<img src="img/intro/man.png" alt="">
+						<div class="intro__master master">
+							<div class="master__name">Руслан Игнатьев</div>
+							<div class="master__position">Руководитель-мастер <span>«ГИЛД-мебель»</span></div>
+						</div>
+					</div>
+					<h1 class="intro__title title">
+						<span>Правильные</span> кухни на&nbsp;заказ от&nbsp;томского производителя
+					</h1>
+					<h2 class="intro__subtitle">На 35% <span>дешевле</span> аналогичных кухонь федеральных салонов и фабрик
+					</h2>
+					<ul class="intro__pros pros">
+						<li class="pros__column">
+							<div class="pros__item">
+								<div class="pros__image pros__image_bigger _ibg">
+									<img src="img/intro/thumbs/01.png" alt="">
+								</div>
+								<p class="pros__title"><span class="pros__bold">Бесплатный</span><br><span
+										class="pros__tippy">сервис</span></p>
+							</div>
+						</li>
+						<li class="pros__column">
+							<div class="pros__item">
+								<div class="pros__image _ibg">
+									<img src="img/intro/thumbs/02.png" alt="">
+								</div>
+								<p class="pros__title"><span class="pros__bold pros__tippy">Удобный</span><br>процесс заказа</p>
+							</div>
+						</li>
+						<li class="pros__column">
+							<div class="pros__item">
+								<div class="pros__image _ibg">
+									<img src="img/intro/thumbs/03.png" alt="">
+								</div>
+								<p class="pros__title">Личный <span class="pros__bold">контроль</span><br><span
+										class="pros__bold pros__tippy">качества</span></p>
+							</div>
+						</li>
+					</ul>
+
+					<div class="intro__case">
+						<div class="intro__left">
+							<div class="intro__dream">Расскажите о&nbsp;вашей кухне мечты и&nbsp;узнайте цену с&nbsp;точностью
+								<span>до&nbsp;90&nbsp;%</span>
+							</div>
+							<div class="intro__count">
+								<button class="intro__button">Быстрый расчет цены</button>
+								<ul data-da=".intro__left,1212,0" class="intro__points">
+									<li class="intro__point">Легкий опрос с&nbsp;фото- и&nbsp;видеоподсказками</li>
+									<li class="intro__point">Не&nbsp;нужно оставлять ваш номер телефона</li>
+									<li class="intro__point">Цена сразу после ответов на&nbsp;вопросы</li>
+								</ul>
+							</div>
+						</div>
+						<div class="intro__right"></div>
+					</div>
+				</div>
+			</section>
+			<div class="page__drop drop">
+
+			</div>
+			<div class="next"></div>
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+.promotion {
+	@include adaptiv-value("padding-top", 50, 40, 1);
+	@include adaptiv-value("padding-bottom", 50, 40, 1);
+	background-color: #e8e8e8;
+	// .promotion__container
+	&__container {
+		display: flex;
+		@media (max-width: $md2+px) {
+			flex-wrap: wrap;
+		}
+	}
+	// .promotion__text
+	&__text {
+		flex: 0 1 50%;
+		@media (max-width: $md2+px) {
+			flex: 1 1 100%;
+			text-align: center;
+		}
+	}
+	// .promotion__title
+	&__title {
+		text-align: left;
+		@media (max-width: $md2+px) {
+			text-align: center;
+		}
+	}
+	// .promotion__descr
+	&__descr {
+		@include adaptiv-value("margin-top", 30, 25, 1);
+		@include adaptiv-value("font-size", 20, 16, 1);
+		line-height: 1.2;
+		font-weight: 500;
+		span {
+			font-weight: 700;
+			@include adaptiv-value("font-size", 26, 20, 1);
+		}
+	}
+	// .promotion__timer
+	&__timer {
+		flex: 0 1 50%;
+		padding: 0px 0px 0px 95px;
+		@media (max-width: $md1+px) {
+			padding: 0px 0px 0px 35px;
+		}
+		@media (max-width: $md2+px) {
+			flex: 1 1 100%;
+			padding: 0px 0px 0px 0px;
+			@include adaptiv-value("margin-top", 40, 30, 1);
+		}
+	}
+}
+
+.timer {
+	@include adaptiv-value("margin-top", 40, 30, 1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	// .timer__block
+	&__block {
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+		flex: 0 0 102px;
+		height: 120px;
+		background-color: #fff;
+		box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+		font-size: 16px;
+		font-weight: 300;
+		text-align: center;
+		span {
+			display: block;
+			margin: 20px 0px 5px 0px;
+			font-size: 56px;
+			font-weight: 700;
+			color: #86afef;
+		}
+		@media (max-width: $md4+px) {
+			flex: 0 0 61px;
+			height: 90px;
+			span {
+				margin: 20px 0px 5px 0px;
+				font-size: 36px;
+			}
+		}
+	}
+}

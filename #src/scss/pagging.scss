@@ -1,0 +1,32 @@
+.pagging {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// .pagging__arrow
+	&__arrow {
+	}
+	// .pagging__list
+	&__list {
+		display: flex;
+		li {
+		}
+	}
+	// .pagging__item
+	&__item {
+		width: 28px;
+		height: 28px;
+		display: flex;
+		font-weight: bold;
+		font-size: 14px;
+		// text-align: center;
+		color: #cfcfcf;
+		justify-content: center;
+		align-items: center;
+		border: 2px solid #d0d0d0;
+		margin: 0px 5px;
+		&._active {
+			border: 2px solid;
+			color: #87b0ee;
+		}
+	}
+}
