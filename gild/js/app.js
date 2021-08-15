@@ -1085,7 +1085,10 @@ animate({
 			Element.prototype.msMatchesSelector;
 	}
 })();
+tippy('.tippy', {
+	content: "ggggggggggggggggg",
 
+});
 //========================================================================================================================================================
 
 // <form action="./server.php" method="POST" class="search-form__item" data-message="ok"

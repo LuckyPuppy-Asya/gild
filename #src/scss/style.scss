@@ -79,6 +79,7 @@ body {
 //@import "datepicker";
 //@import "lightgallery";
 //@import "pagging";
+@import "tippy";
 @import "popup";
 @import "header";
 @import "footer";
@@ -90,6 +91,9 @@ body {
 	flex: 1 1 auto;
 	// .page__intro
 	&__intro {
+	}
+	// .page__panel
+	&__panel {
 	}
 }
 //===================================================================================================================================
