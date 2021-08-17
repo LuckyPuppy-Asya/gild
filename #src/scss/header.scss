@@ -94,7 +94,7 @@
 		@media (any-hover: hover) {
 			&:hover {
 				svg {
-					fill: $greenColor;
+					fill: rgb(116, 4, 4);
 				}
 			}
 		}
@@ -404,6 +404,13 @@
 			object-fit: cover;
 			fill: $mainColor;
 		}
+		@media (any-hover: hover) {
+			&:hover {
+				svg {
+					fill: #04d464;
+				}
+			}
+		}
 	}
 }
 .online {
@@ -465,6 +472,7 @@
 		width: 17px;
 		height: 17px;
 		position: relative;
+		transition: all 0.3s ease 0s;
 		&::before {
 			content: "";
 			position: absolute;
@@ -496,6 +504,20 @@
 			}
 			&::before {
 				border: 1px solid #44bf70;
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&:nth-child(1) {
+					&::before {
+						box-shadow: 0px 0px 25px rgba(132, 64, 177, 0.5);
+					}
+				}
+				&:nth-child(2) {
+					&::before {
+						box-shadow: 0px 0px 25px rgba(45, 208, 56, 0.5);
+					}
+				}
 			}
 		}
 	}
@@ -612,11 +634,17 @@
 		font-weight: 600;
 		font-size: 15px;
 		color: #43474a;
+		transition: all 0.3s ease 0s;
 		@media (min-width: $md1+px) {
 			margin: 0px 0px 4px 0px;
 		}
 		@media (max-width: $md1+px) {
 			margin: 0px 18px 0px 0px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 	// .info__callback

@@ -1085,8 +1085,8 @@ animate({
 			Element.prototype.msMatchesSelector;
 	}
 })();
-tippy('.tippy', {
-	content: "ggggggggggggggggg",
+tippy('._tooltip', {
+	content: "Дополнительная информация",
 
 });
 //========================================================================================================================================================
@@ -1629,6 +1629,8 @@ if (priceSlider) {
 		priceSlider.noUiSlider.set([priceStartValue, priceEndValue]);
 	}
 }
+// см про возможности этой программы в видео по шаблону , заканчивается на времени 1:23:00
+
 let scr_body = document.querySelector('body');
 let scr_blocks = document.querySelectorAll('._scr-sector');
 let scr_items = document.querySelectorAll('._scr-item');
