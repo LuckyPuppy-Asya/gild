@@ -6,7 +6,6 @@
 
 <body>
 	<div class="wrapper">
-
 		<main class="page">
 			<section class="page__intro intro">
 				<div class="intro__bg _ibg">
@@ -138,13 +137,13 @@
 								<div class="left__item one">
 									<h2 class="left__title title">Что вам может быть интересно?</h2>
 								</div>
-								<div class="left__item two _ibg">
+								<a href="#" class="left__item two _simple-go _ibg">
 									<img src="img/grid/02.jpg" alt="">
 									<div class="two__abs-image _ibg">
 										<img src="img/grid/22.png" alt="">
 									</div>
-									<a href="" class="two__abs absolute">Каталог кухонь</a>
-								</div>
+									<span class="two__abs absolute">Каталог кухонь</span>
+								</a>
 								<div class="left__item three _ibg">
 									<img src="img/grid/3.jpg" alt="">
 									<p class="three__text">
@@ -155,7 +154,7 @@
 										Ut enim ad minim
 										veniam, quis nostrud"
 									</p>
-									<a href="" class="three__link">
+									<a href="#barrier" class="three__link _popup-link">
 										<div class="three__link-name">Подробнее</div>
 										<span class="three__icon">
 											<svg>
@@ -164,10 +163,10 @@
 										</span>
 									</a>
 								</div>
-								<div class="left__item four _ibg">
+								<a class="left__item four _simple-go _ibg" data-goto=".details" href="#">
 									<img src="img/grid/4.jpg" alt="">
-									<a href="" class="four__abs absolute">Элементы кухни</a>
-								</div>
+									<span class="four__abs absolute">Элементы кухни</span>
+								</a>
 								<div class="left__item five _ibg">
 									<img src="img/grid/5.jpg" alt="">
 									<a href="" class="five__abs absolute">Примеры проектов с ценами</a>
@@ -191,9 +190,9 @@
 									</div>
 									<a href="" class="eight__abs absolute">калькулятор цены кухонь</a>
 								</div>
-								<div class="right__item nine _ibg">
+								<a href="#barrier" class="right__item nine _popup-link _ibg">
 									<img src="img/grid/9.png" alt="">
-								</div>
+								</a>
 								<div class="right__item ten _ibg">
 									<img src="img/grid/10.jpg" alt="">
 									<a href="" class="ten__abs absolute absolute_start">информация о компании</a>
@@ -211,10 +210,10 @@
 					<h2 class="adapt__title title">Что вам может быть интересно?</h2>
 					<div class="adapt__row">
 						<div class="adapt__column">
-							<div class="adapt__item four _ibg">
+							<a href="#" data-goto=".details" class="adapt__item four _simple-go _ibg">
 								<img src="img/grid/4.jpg" alt="">
-								<a href="" class="four__abs absolute">Элементы кухни</a>
-							</div>
+								<span class="four__abs absolute">Элементы кухни</span>
+							</a>
 						</div>
 						<div class="adapt__column">
 							<div class="adapt__item six _ibg">
@@ -240,7 +239,7 @@
 										Ut enim ad minim
 										veniam, quis nostrud"
 									</p>
-									<a href="" class="case__link">
+									<a href="#barrier" class="case__link _popup-link">
 										<div class="case__link-name">Подробнее</div>
 										<span class="case__icon">
 											<svg>
@@ -258,9 +257,9 @@
 							</div>
 						</div>
 						<div class="adapt__column">
-							<div class="adapt__item adapt__item_middle nine _ibg">
+							<a href="#barrier" class="adapt__item adapt__item_middle nine _popup-link _ibg">
 								<img src="img/grid/9.png" alt="">
-							</div>
+							</a>
 						</div>
 						<div class="adapt__column">
 							<div class="adapt__item adapt__item_high adapt__item_oh two _ibg">
@@ -298,10 +297,10 @@
 							<img src="img/grid/mobile-0.png" alt="">
 							<a href="" class="four__abs absolute">Каталог материалов</a>
 						</div>
-						<div class="grid-mobile__item mobile-four _ibg">
+						<a href="#" data-goto=".details" class="grid-mobile__item mobile-four _simple-go _ibg">
 							<img src="img/grid/4.jpg" alt="">
-							<a href="" class="four__abs absolute">Элементы кухни</a>
-						</div>
+							<span class="four__abs absolute">Элементы кухни</span>
+						</a>
 						<div class="grid-mobile__item mobile-two _ibg">
 							<img src="img/grid/02.jpg" alt="">
 							<div class="mobile-two__abs-image _ibg">
@@ -309,9 +308,9 @@
 							</div>
 							<a href="" class="mobile-two__abs absolute">Каталог кухонь</a>
 						</div>
-						<div class="grid-mobile__item mobile-nine _ibg">
+						<a href="#barrier" class="grid-mobile__item mobile-nine _popup-link _ibg">
 							<img src="img/grid/9.png" alt="">
-						</div>
+						</a>
 						<div class="grid-mobile__item mobile-eight _ibg">
 							<img src="img/grid/mobile-8.png" alt="">
 							<a href="" class="mobile-eight__abs absolute">калькулятор цены кухонь</a>
@@ -332,15 +331,748 @@
 				</div>
 			</section>
 			<section class="page__details details">
-				<div class="details__container _container _ibg">
-					<img src="img/details/table.png" alt="">
-					<img src="img/details/lamp.png" alt="">
+				<div class="details__container _container">
+					<div class="details__bg-table _ibg">
+						<img src="img/details/table.png" alt="">
+					</div>
+					<div class="details__bg-main _ibg">
+						<img src="img/details/main.png" alt="">
+						<div data-dot="01" class="details__dot details__dot_01">
+						</div>
+						<div data-dot="02" class="details__dot details__dot_02">
+						</div>
+						<div data-dot="03" class="details__dot details__dot_03">
+						</div>
+						<div data-dot="04" class="details__dot details__dot_04">
+						</div>
+						<div data-dot="05" class="details__dot details__dot_05">
+						</div>
+						<div data-dot="06" class="details__dot details__dot_06">
+						</div>
+						<div data-dot="07" class="details__dot details__dot_07">
+						</div>
+						<div data-dot="08" class="details__dot details__dot_08">
+						</div>
+						<div data-dot="09" class="details__dot details__dot_09">
+						</div>
+						<div data-dot="10" class="details__dot details__dot_10">
+						</div>
+						<div data-dot="11" class="details__dot details__dot_11">
+						</div>
+					</div>
 					<h2 class="details__title title">
 						Основные элементы кухонь.<br>
 						Их особенности и цена
 					</h2>
-					<div class="details__window window">
-						<div class="window__body"></div>
+					<div class="details__tabs-block tabs-block _tabs">
+						<div class="tabs-block__decor">
+							<nav class="tabs-block__nav">
+								<div data-btn="01" class="tabs-block__item _tabs-item">Фурнитура подъемных дверей</div>
+								<div data-btn="02" class="tabs-block__item _tabs-item">Фурнитура распашных дверей</div>
+								<div data-btn="03" class="tabs-block__item _tabs-item">Столешница</div>
+								<div data-btn="04" class="tabs-block__item _tabs-item">Ручки</div>
+								<div data-btn="05" class="tabs-block__item _tabs-item">Функциональное наполнение</div>
+								<div data-btn="06" class="tabs-block__item _tabs-item">Выдвижные ящики</div>
+								<div data-btn="07" class="tabs-block__item _tabs-item">Складной подъемник</div>
+								<div data-btn="08" class="tabs-block__item _tabs-item">Верхний шкаф</div>
+								<div data-btn="09" class="tabs-block__item _tabs-item">Фартук</div>
+								<div data-btn="10" class="tabs-block__item _tabs-item">Корпус из ЛДСП</div>
+								<div data-btn="11" class="tabs-block__item _tabs-item">Материал фасада</div>
+							</nav>
+						</div>
+						<div class="tabs-block__body">
+							<div class="tabs-block__block block _tabs-block">
+								<div class="block__wrapper">
+									<div class="block__up">
+										<h3 class="block__title">Фурнитура подъемных дверей</h3>
+										<button class="block__close-icon" type="button">
+											<svg>
+												<use xlink:href="sprite.svg#close"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="block__down">
+										<div class="block__content">
+											<p>11111Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, rem nulla omnis
+												accusamus
+												praesentium veritatis voluptate nihil sint mollitia asperiores officiis consequatur.
+												Fugiat
+												ullam totam animi id vero facilis optio.</p>
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia itaque autem
+												expedita
+												neque explicabo sint aperiam sapiente quae optio molestiae, asperiores atque, nobis
+												id,
+												totam
+												reprehenderit ad. Blanditiis, nihil.</p>
+											<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic impedit suscipit,
+												distinctio, reiciendis laboriosam earum pariatur officia quia voluptatibus cum
+												delectus sint exercitationem dolore minima? Quibusdam neque earum amet consequuntur.
+												Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, corporis.</p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quaerat
+												consectetur, est vero ex aliquid recusandae in fugiat, veritatis blanditiis
+												reiciendis commodi aperiam asperiores omnis quis deleniti ratione porro incidunt!
+											</p>
+										</div>
+										<button class="block__close" type="button">Закрыть</button>
+									</div>
+								</div>
+							</div>
+							<div class="tabs-block__block block _tabs-block">
+								<div class="block__wrapper">
+									<div class="block__up">
+										<h3 class="block__title">Фурнитура распашных дверей</h3>
+										<button class="block__close-icon" type="button">
+											<svg>
+												<use xlink:href="sprite.svg#close"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="block__down">
+										<div class="block__content">
+											<p>222222222222Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, rem
+												nulla omnis
+												accusamus
+												praesentium veritatis voluptate nihil sint mollitia asperiores officiis consequatur.
+												Fugiat
+												ullam totam animi id vero facilis optio.</p>
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia itaque autem
+												expedita
+												neque explicabo sint aperiam sapiente quae optio molestiae, asperiores atque, nobis
+												id,
+												totam
+												reprehenderit ad. Blanditiis, nihil.</p>
+											<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, corporis.</p>
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+										</div>
+										<button class="block__close" type="button">Закрыть</button>
+									</div>
+								</div>
+							</div>
+							<div class="tabs-block__block block _tabs-block">
+								<div class="block__wrapper">
+									<div class="block__up">
+										<h3 class="block__title">Столешница</h3>
+										<button class="block__close-icon" type="button">
+											<svg>
+												<use xlink:href="sprite.svg#close"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="block__down">
+										<div class="block__content">
+											<p>333333333333Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, rem
+												nulla omnis
+												accusamus
+												praesentium veritatis voluptate nihil sint mollitia asperiores officiis consequatur.
+												Fugiat
+												ullam totam animi id vero facilis optio.</p>
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia itaque autem
+												expedita
+												neque explicabo sint aperiam sapiente quae optio molestiae, asperiores atque, nobis
+												id,
+												totam
+												reprehenderit ad. Blanditiis, nihil.</p>
+											<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, corporis.</p>
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+										</div>
+										<button class="block__close" type="button">Закрыть</button>
+									</div>
+								</div>
+							</div>
+							<div class="tabs-block__block block _tabs-block">
+								<div class="block__wrapper">
+									<div class="block__up">
+										<h3 class="block__title">Ручки</h3>
+										<button class="block__close-icon" type="button">
+											<svg>
+												<use xlink:href="sprite.svg#close"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="block__down">
+										<div class="block__content">
+											<p>4444444444444Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, rem
+												nulla omnis
+												accusamus
+												praesentium veritatis voluptate nihil sint mollitia asperiores officiis consequatur.
+												Fugiat
+												ullam totam animi id vero facilis optio.</p>
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia itaque autem
+												expedita
+												neque explicabo sint aperiam sapiente quae optio molestiae, asperiores atque, nobis
+												id,
+												totam
+												reprehenderit ad. Blanditiis, nihil.</p>
+											<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, corporis.</p>
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+										</div>
+										<button class="block__close" type="button">Закрыть</button>
+									</div>
+								</div>
+							</div>
+							<div class="tabs-block__block block _tabs-block">
+								<div class="block__wrapper">
+									<div class="block__up">
+										<h3 class="block__title">Функциональное наполнение</h3>
+										<button class="block__close-icon" type="button">
+											<svg>
+												<use xlink:href="sprite.svg#close"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="block__down">
+										<div class="block__content">
+											<p>555555555555555Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, rem
+												nulla omnis
+												accusamus
+												praesentium veritatis voluptate nihil sint mollitia asperiores officiis consequatur.
+												Fugiat
+												ullam totam animi id vero facilis optio.</p>
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia itaque autem
+												expedita
+												neque explicabo sint aperiam sapiente quae optio molestiae, asperiores atque, nobis
+												id,
+												totam
+												reprehenderit ad. Blanditiis, nihil.</p>
+											<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, corporis.</p>
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+										</div>
+										<button class="block__close" type="button">Закрыть</button>
+									</div>
+								</div>
+							</div>
+							<div class="tabs-block__block block _tabs-block">
+								<div class="block__wrapper">
+									<div class="block__up">
+										<h3 class="block__title">Выдвижные ящики</h3>
+										<button class="block__close-icon" type="button">
+											<svg>
+												<use xlink:href="sprite.svg#close"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="block__down">
+										<div class="block__content">
+											<p>666666666666666Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, rem
+												nulla omnis
+												accusamus
+												praesentium veritatis voluptate nihil sint mollitia asperiores officiis consequatur.
+												Fugiat
+												ullam totam animi id vero facilis optio.</p>
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia itaque autem
+												expedita
+												neque explicabo sint aperiam sapiente quae optio molestiae, asperiores atque, nobis
+												id,
+												totam
+												reprehenderit ad. Blanditiis, nihil.</p>
+											<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, corporis.</p>
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+										</div>
+										<button class="block__close" type="button">Закрыть</button>
+									</div>
+								</div>
+							</div>
+							<div class="tabs-block__block block _tabs-block">
+								<div class="block__wrapper">
+									<div class="block__up">
+										<h3 class="block__title">Складной подъемник</h3>
+										<button class="block__close-icon" type="button">
+											<svg>
+												<use xlink:href="sprite.svg#close"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="block__down">
+										<div class="block__content">
+											<p>7777777777777Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, rem
+												nulla omnis
+												accusamus
+												praesentium veritatis voluptate nihil sint mollitia asperiores officiis consequatur.
+												Fugiat
+												ullam totam animi id vero facilis optio.</p>
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia itaque autem
+												expedita
+												neque explicabo sint aperiam sapiente quae optio molestiae, asperiores atque, nobis
+												id,
+												totam
+												reprehenderit ad. Blanditiis, nihil.</p>
+											<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, corporis.</p>
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+										</div>
+										<button class="block__close" type="button">Закрыть</button>
+									</div>
+								</div>
+							</div>
+							<div class="tabs-block__block block _tabs-block">
+								<div class="block__wrapper">
+									<div class="block__up">
+										<h3 class="block__title">Верхний шкаф</h3>
+										<button class="block__close-icon" type="button">
+											<svg>
+												<use xlink:href="sprite.svg#close"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="block__down">
+										<div class="block__content">
+											<p>888888888888888Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, rem
+												nulla omnis
+												accusamus
+												praesentium veritatis voluptate nihil sint mollitia asperiores officiis consequatur.
+												Fugiat
+												ullam totam animi id vero facilis optio.</p>
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia itaque autem
+												expedita
+												neque explicabo sint aperiam sapiente quae optio molestiae, asperiores atque, nobis
+												id,
+												totam
+												reprehenderit ad. Blanditiis, nihil.</p>
+											<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, corporis.</p>
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+										</div>
+										<button class="block__close" type="button">Закрыть</button>
+									</div>
+								</div>
+							</div>
+							<div class="tabs-block__block block _tabs-block">
+								<div class="block__wrapper">
+									<div class="block__up">
+										<h3 class="block__title">Фартук</h3>
+										<button class="block__close-icon" type="button">
+											<svg>
+												<use xlink:href="sprite.svg#close"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="block__down">
+										<div class="block__content">
+											<p>9999999999999Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, rem
+												nulla omnis
+												accusamus
+												praesentium veritatis voluptate nihil sint mollitia asperiores officiis consequatur.
+												Fugiat
+												ullam totam animi id vero facilis optio.</p>
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia itaque autem
+												expedita
+												neque explicabo sint aperiam sapiente quae optio molestiae, asperiores atque, nobis
+												id,
+												totam
+												reprehenderit ad. Blanditiis, nihil.</p>
+											<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, corporis.</p>
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+										</div>
+										<button class="block__close" type="button">Закрыть</button>
+									</div>
+								</div>
+							</div>
+							<div class="tabs-block__block block _tabs-block">
+								<div class="block__wrapper">
+									<div class="block__up">
+										<h3 class="block__title">Корпус из ЛДСП</h3>
+										<button class="block__close-icon" type="button">
+											<svg>
+												<use xlink:href="sprite.svg#close"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="block__down">
+										<div class="block__content">
+											<p>101010101010Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, rem
+												nulla omnis
+												accusamus
+												praesentium veritatis voluptate nihil sint mollitia asperiores officiis consequatur.
+												Fugiat
+												ullam totam animi id vero facilis optio.</p>
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia itaque autem
+												expedita
+												neque explicabo sint aperiam sapiente quae optio molestiae, asperiores atque, nobis
+												id,
+												totam
+												reprehenderit ad. Blanditiis, nihil.</p>
+											<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, corporis.</p>
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+										</div>
+										<button class="block__close" type="button">Закрыть</button>
+									</div>
+								</div>
+							</div>
+							<div class="tabs-block__block block _tabs-block">
+								<div class="block__wrapper">
+									<div class="block__up">
+										<h3 class="block__title">Материал фасада</h3>
+										<button class="block__close-icon" type="button">
+											<svg>
+												<use xlink:href="sprite.svg#close"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="block__down">
+										<div class="block__content">
+											<p>123456789011Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, rem
+												nulla omnis
+												accusamus
+												praesentium veritatis voluptate nihil sint mollitia asperiores officiis consequatur.
+												Fugiat
+												ullam totam animi id vero facilis optio.</p>
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia itaque autem
+												expedita
+												neque explicabo sint aperiam sapiente quae optio molestiae, asperiores atque, nobis
+												id,
+												totam
+												reprehenderit ad. Blanditiis, nihil.</p>
+											<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, corporis.</p>
+											<p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+										</div>
+										<button class="block__close" type="button">Закрыть</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="details__spoller spoller-details">
+						<ul data-spollers="767.98,max" data-one-spoller class="spoller-details__list">
+							<li class="spoller-details__item">
+								<button data-spoller type="button" class="spoller-details__btn btn-spoller">
+									<div class="btn-spoller__name">Фурнитура подъемных дверей</div>
+									<div class="btn-spoller__icon">
+										<svg>
+											<use xlink:href="sprite.svg#arrow-down"></use>
+										</svg>
+									</div>
+								</button>
+								<div class="spoller-details__content">
+									<p>11111Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, rem nulla omnis
+										accusamus
+										praesentium veritatis voluptate nihil sint mollitia asperiores officiis consequatur.
+										Fugiat
+										ullam totam animi id vero facilis optio.</p>
+									<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia itaque autem
+										expedita
+										neque explicabo sint aperiam sapiente quae optio molestiae, asperiores atque, nobis
+										id,
+										totam
+										reprehenderit ad. Blanditiis, nihil.</p>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic impedit suscipit,
+										distinctio, reiciendis laboriosam earum pariatur officia quia voluptatibus cum
+										delectus sint exercitationem dolore minima? Quibusdam neque earum amet consequuntur.
+										Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, corporis.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quaerat
+										consectetur, est vero ex aliquid recusandae in fugiat, veritatis blanditiis
+										reiciendis commodi aperiam asperiores omnis quis deleniti ratione porro incidunt!
+									</p>
+								</div>
+							</li>
+							<li class="spoller-details__item">
+								<button data-spoller type="button" class="spoller-details__btn btn-spoller">
+									<div class="btn-spoller__name">Фурнитура распашных дверей</div>
+									<div class="btn-spoller__icon">
+										<svg>
+											<use xlink:href="sprite.svg#arrow-down"></use>
+										</svg>
+									</div>
+								</button>
+								<div class="spoller-details__content">
+									<p>11111Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, rem nulla omnis
+										accusamus
+										praesentium veritatis voluptate nihil sint mollitia asperiores officiis consequatur.
+										Fugiat
+										ullam totam animi id vero facilis optio.</p>
+									<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia itaque autem
+										expedita
+										neque explicabo sint aperiam sapiente quae optio molestiae, asperiores atque, nobis
+										id,
+										totam
+										reprehenderit ad. Blanditiis, nihil.</p>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic impedit suscipit,
+										distinctio, reiciendis laboriosam earum pariatur officia quia voluptatibus cum
+										delectus sint exercitationem dolore minima? Quibusdam neque earum amet consequuntur.
+										Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, corporis.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quaerat
+										consectetur, est vero ex aliquid recusandae in fugiat, veritatis blanditiis
+										reiciendis commodi aperiam asperiores omnis quis deleniti ratione porro incidunt!
+									</p>
+								</div>
+							</li>
+							<li class="spoller-details__item">
+								<button data-spoller type="button" class="spoller-details__btn btn-spoller">
+									<div class="btn-spoller__name">Столешница</div>
+									<div class="btn-spoller__icon">
+										<svg>
+											<use xlink:href="sprite.svg#arrow-down"></use>
+										</svg>
+									</div>
+								</button>
+								<div class="spoller-details__content">
+									<p>11111Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, rem nulla omnis
+										accusamus
+										praesentium veritatis voluptate nihil sint mollitia asperiores officiis consequatur.
+										Fugiat
+										ullam totam animi id vero facilis optio.</p>
+									<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia itaque autem
+										expedita
+										neque explicabo sint aperiam sapiente quae optio molestiae, asperiores atque, nobis
+										id,
+										totam
+										reprehenderit ad. Blanditiis, nihil.</p>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic impedit suscipit,
+										distinctio, reiciendis laboriosam earum pariatur officia quia voluptatibus cum
+										delectus sint exercitationem dolore minima? Quibusdam neque earum amet consequuntur.
+										Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, corporis.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quaerat
+										consectetur, est vero ex aliquid recusandae in fugiat, veritatis blanditiis
+										reiciendis commodi aperiam asperiores omnis quis deleniti ratione porro incidunt!
+									</p>
+								</div>
+							</li>
+							<li class="spoller-details__item">
+								<button data-spoller type="button" class="spoller-details__btn btn-spoller">
+									<div class="btn-spoller__name">Ручки</div>
+									<div class="btn-spoller__icon">
+										<svg>
+											<use xlink:href="sprite.svg#arrow-down"></use>
+										</svg>
+									</div>
+								</button>
+								<div class="spoller-details__content">
+									<p>11111Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, rem nulla omnis
+										accusamus
+										praesentium veritatis voluptate nihil sint mollitia asperiores officiis consequatur.
+										Fugiat
+										ullam totam animi id vero facilis optio.</p>
+									<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia itaque autem
+										expedita
+										neque explicabo sint aperiam sapiente quae optio molestiae, asperiores atque, nobis
+										id,
+										totam
+										reprehenderit ad. Blanditiis, nihil.</p>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic impedit suscipit,
+										distinctio, reiciendis laboriosam earum pariatur officia quia voluptatibus cum
+										delectus sint exercitationem dolore minima? Quibusdam neque earum amet consequuntur.
+										Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, corporis.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quaerat
+										consectetur, est vero ex aliquid recusandae in fugiat, veritatis blanditiis
+										reiciendis commodi aperiam asperiores omnis quis deleniti ratione porro incidunt!
+									</p>
+								</div>
+							</li>
+							<li class="spoller-details__item">
+								<button data-spoller type="button" class="spoller-details__btn btn-spoller">
+									<div class="btn-spoller__name">Функциональное наполнение</div>
+									<div class="btn-spoller__icon">
+										<svg>
+											<use xlink:href="sprite.svg#arrow-down"></use>
+										</svg>
+									</div>
+								</button>
+								<div class="spoller-details__content">
+									<p>11111Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, rem nulla omnis
+										accusamus
+										praesentium veritatis voluptate nihil sint mollitia asperiores officiis consequatur.
+										Fugiat
+										ullam totam animi id vero facilis optio.</p>
+									<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia itaque autem
+										expedita
+										neque explicabo sint aperiam sapiente quae optio molestiae, asperiores atque, nobis
+										id,
+										totam
+										reprehenderit ad. Blanditiis, nihil.</p>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic impedit suscipit,
+										distinctio, reiciendis laboriosam earum pariatur officia quia voluptatibus cum
+										delectus sint exercitationem dolore minima? Quibusdam neque earum amet consequuntur.
+										Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, corporis.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quaerat
+										consectetur, est vero ex aliquid recusandae in fugiat, veritatis blanditiis
+										reiciendis commodi aperiam asperiores omnis quis deleniti ratione porro incidunt!
+									</p>
+								</div>
+							</li>
+							<li class="spoller-details__item">
+								<button data-spoller type="button" class="spoller-details__btn btn-spoller">
+									<div class="btn-spoller__name">Выдвижные ящики</div>
+									<div class="btn-spoller__icon">
+										<svg>
+											<use xlink:href="sprite.svg#arrow-down"></use>
+										</svg>
+									</div>
+								</button>
+								<div class="spoller-details__content">
+									<p>11111Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, rem nulla omnis
+										accusamus
+										praesentium veritatis voluptate nihil sint mollitia asperiores officiis consequatur.
+										Fugiat
+										ullam totam animi id vero facilis optio.</p>
+									<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia itaque autem
+										expedita
+										neque explicabo sint aperiam sapiente quae optio molestiae, asperiores atque, nobis
+										id,
+										totam
+										reprehenderit ad. Blanditiis, nihil.</p>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic impedit suscipit,
+										distinctio, reiciendis laboriosam earum pariatur officia quia voluptatibus cum
+										delectus sint exercitationem dolore minima? Quibusdam neque earum amet consequuntur.
+										Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, corporis.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quaerat
+										consectetur, est vero ex aliquid recusandae in fugiat, veritatis blanditiis
+										reiciendis commodi aperiam asperiores omnis quis deleniti ratione porro incidunt!
+									</p>
+								</div>
+							</li>
+							<li class="spoller-details__item">
+								<button data-spoller type="button" class="spoller-details__btn btn-spoller">
+									<div class="btn-spoller__name">Складной подъемник</div>
+									<div class="btn-spoller__icon">
+										<svg>
+											<use xlink:href="sprite.svg#arrow-down"></use>
+										</svg>
+									</div>
+								</button>
+								<div class="spoller-details__content">
+									<p>11111Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, rem nulla omnis
+										accusamus
+										praesentium veritatis voluptate nihil sint mollitia asperiores officiis consequatur.
+										Fugiat
+										ullam totam animi id vero facilis optio.</p>
+									<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia itaque autem
+										expedita
+										neque explicabo sint aperiam sapiente quae optio molestiae, asperiores atque, nobis
+										id,
+										totam
+										reprehenderit ad. Blanditiis, nihil.</p>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic impedit suscipit,
+										distinctio, reiciendis laboriosam earum pariatur officia quia voluptatibus cum
+										delectus sint exercitationem dolore minima? Quibusdam neque earum amet consequuntur.
+										Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, corporis.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quaerat
+										consectetur, est vero ex aliquid recusandae in fugiat, veritatis blanditiis
+										reiciendis commodi aperiam asperiores omnis quis deleniti ratione porro incidunt!
+									</p>
+								</div>
+							</li>
+							<li class="spoller-details__item">
+								<button data-spoller type="button" class="spoller-details__btn btn-spoller">
+									<div class="btn-spoller__name">Верхний шкаф</div>
+									<div class="btn-spoller__icon">
+										<svg>
+											<use xlink:href="sprite.svg#arrow-down"></use>
+										</svg>
+									</div>
+								</button>
+								<div class="spoller-details__content">
+									<p>11111Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, rem nulla omnis
+										accusamus
+										praesentium veritatis voluptate nihil sint mollitia asperiores officiis consequatur.
+										Fugiat
+										ullam totam animi id vero facilis optio.</p>
+									<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia itaque autem
+										expedita
+										neque explicabo sint aperiam sapiente quae optio molestiae, asperiores atque, nobis
+										id,
+										totam
+										reprehenderit ad. Blanditiis, nihil.</p>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic impedit suscipit,
+										distinctio, reiciendis laboriosam earum pariatur officia quia voluptatibus cum
+										delectus sint exercitationem dolore minima? Quibusdam neque earum amet consequuntur.
+										Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, corporis.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quaerat
+										consectetur, est vero ex aliquid recusandae in fugiat, veritatis blanditiis
+										reiciendis commodi aperiam asperiores omnis quis deleniti ratione porro incidunt!
+									</p>
+								</div>
+							</li>
+							<li class="spoller-details__item">
+								<button data-spoller type="button" class="spoller-details__btn btn-spoller">
+									<div class="btn-spoller__name">Фартук</div>
+									<div class="btn-spoller__icon">
+										<svg>
+											<use xlink:href="sprite.svg#arrow-down"></use>
+										</svg>
+									</div>
+								</button>
+								<div class="spoller-details__content">
+									<p>11111Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, rem nulla omnis
+										accusamus
+										praesentium veritatis voluptate nihil sint mollitia asperiores officiis consequatur.
+										Fugiat
+										ullam totam animi id vero facilis optio.</p>
+									<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia itaque autem
+										expedita
+										neque explicabo sint aperiam sapiente quae optio molestiae, asperiores atque, nobis
+										id,
+										totam
+										reprehenderit ad. Blanditiis, nihil.</p>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic impedit suscipit,
+										distinctio, reiciendis laboriosam earum pariatur officia quia voluptatibus cum
+										delectus sint exercitationem dolore minima? Quibusdam neque earum amet consequuntur.
+										Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, corporis.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quaerat
+										consectetur, est vero ex aliquid recusandae in fugiat, veritatis blanditiis
+										reiciendis commodi aperiam asperiores omnis quis deleniti ratione porro incidunt!
+									</p>
+								</div>
+							</li>
+							<li class="spoller-details__item">
+								<button data-spoller type="button" class="spoller-details__btn btn-spoller">
+									<div class="btn-spoller__name">Корпус из ЛДСП</div>
+									<div class="btn-spoller__icon">
+										<svg>
+											<use xlink:href="sprite.svg#arrow-down"></use>
+										</svg>
+									</div>
+								</button>
+								<div class="spoller-details__content">
+									<p>11111Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, rem nulla omnis
+										accusamus
+										praesentium veritatis voluptate nihil sint mollitia asperiores officiis consequatur.
+										Fugiat
+										ullam totam animi id vero facilis optio.</p>
+									<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia itaque autem
+										expedita
+										neque explicabo sint aperiam sapiente quae optio molestiae, asperiores atque, nobis
+										id,
+										totam
+										reprehenderit ad. Blanditiis, nihil.</p>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic impedit suscipit,
+										distinctio, reiciendis laboriosam earum pariatur officia quia voluptatibus cum
+										delectus sint exercitationem dolore minima? Quibusdam neque earum amet consequuntur.
+										Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, corporis.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quaerat
+										consectetur, est vero ex aliquid recusandae in fugiat, veritatis blanditiis
+										reiciendis commodi aperiam asperiores omnis quis deleniti ratione porro incidunt!
+									</p>
+								</div>
+							</li>
+							<li class="spoller-details__item">
+								<button data-spoller type="button" class="spoller-details__btn btn-spoller">
+									<div class="btn-spoller__name">Материал фасада</div>
+									<div class="btn-spoller__icon">
+										<svg>
+											<use xlink:href="sprite.svg#arrow-down"></use>
+										</svg>
+									</div>
+								</button>
+								<div class="spoller-details__content">
+									<p>11111Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, rem nulla omnis
+										accusamus
+										praesentium veritatis voluptate nihil sint mollitia asperiores officiis consequatur.
+										Fugiat
+										ullam totam animi id vero facilis optio.</p>
+									<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia itaque autem
+										expedita
+										neque explicabo sint aperiam sapiente quae optio molestiae, asperiores atque, nobis
+										id,
+										totam
+										reprehenderit ad. Blanditiis, nihil.</p>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic impedit suscipit,
+										distinctio, reiciendis laboriosam earum pariatur officia quia voluptatibus cum
+										delectus sint exercitationem dolore minima? Quibusdam neque earum amet consequuntur.
+										Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, corporis.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quaerat
+										consectetur, est vero ex aliquid recusandae in fugiat, veritatis blanditiis
+										reiciendis commodi aperiam asperiores omnis quis deleniti ratione porro incidunt!
+									</p>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</section>

@@ -1,29 +1,92 @@
-<div class="popup popup_popup">
+<div class="popup popup_question">
 	<div class="popup__content">
 		<div class="popup__body">
-			<button type="button" class="popup__close">
+			<button class="popup__close">
 				<svg>
 					<use xlink:href="sprite.svg#close"></use>
 				</svg>
 			</button>
+			<form action="./server.php" method="POST" class="popup__form form" data-message="ok" data-ajax="true">
+				<p class="form__title">Задать вопрос</p>
+				<div class="form__body">
+					<div class="form__line">
+						<input autocomplete="off" type="text" name="form[name]" data-error="Заполните поле"
+							data-value="Ваше имя" class="form__input input _req">
+					</div>
+					<div class="form__line">
+						<input autocomplete="off" type="text" name="form[email]" data-error="Заполните поле"
+							data-value="Ваш e-mail" class="form__input input _email _req">
+					</div>
+					<div class="form__line">
+						<input autocomplete="off" type="text" name="form[phone]" data-error="" data-value="Ваш телефон"
+							class="form__input input _phone">
+					</div>
+					<div class="form__line">
+						<select name="form[field]" class="form">
+							<option value="1" selected="selected">Выберите направление</option>
+							<option value="2">БИО технологии</option>
+							<option value="3">Нефтехимические технологии</option>
+						</select>
+					</div>
+					<div class="form__line">
+						<textarea autocomplete="off" name="form[question]" data-value="Ваш вопрос" data-error=""
+							class="input"></textarea>
+					</div>
+					<div class="form__line form__line_btn">
+						<button type="submit" class="form__input form__btn btn">Задать вопрос</button>
+					</div>
+					<div class="form__line agreement">
+						<div class="agreement__text">Нажимая на&nbsp;кнопку, вы соглашаетесь<br>c <a href="#barrier"
+								class="_popup-link">политикой
+								конфиденциальности</a></div>
+					</div>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
-<div class="popup popup_massagename-message">
+<div class="popup popup_barrier">
 	<div class="popup__content">
-		<div class="popup__body">
-			<button type="button" class="popup__close">
+		<div class="popup__body popup__body_white">
+			<button class="popup__close popup__close_gray">
 				<svg>
 					<use xlink:href="sprite.svg#close"></use>
 				</svg>
 			</button>
+			<div class="popup__barrier barrier">
+				<div class="barrier__title">Страница находится в&nbsp;разработке</div>
+				<div class="barrier__subtitle">Совсем скоро она заработает</div>
+				<div class="barrier__image _ibg">
+					<img src="img/barrier_02.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup_ok-message">
+	<div class="popup__content">
+		<div class="popup__body popup__body_white">
+			<button class="popup__close popup__close_gray">
+				<svg>
+					<use xlink:href="sprite.svg#close"></use>
+				</svg>
+			</button>
+			<div class="popup__ok ok">
+				<div class="ok__image _ibg">
+					<img src="img/airline.png" alt="">
+				</div>
+				<div class="ok__text">
+					<p>Данные успешно отправлены</p>
+					<p>Мы скоро с Вами свяжемся</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
 <div class="popup popup_video">
 	<div class="popup__content">
 		<div class="popup__body">
-			<button type="button" class="popup__close popup__close_video">
+			<button class="popup__close popup__close_video">
 				<svg>
 					<use xlink:href="sprite.svg#close"></use>
 				</svg>

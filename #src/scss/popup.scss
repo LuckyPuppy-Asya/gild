@@ -1,6 +1,6 @@
 //====================================================================================================
 .popup {
-	-webkit-overflow-scrolling: touch;
+	// -webkit-overflow-scrolling: touch; браузер как ошибку
 	position: fixed;
 	top: 0px;
 	left: 0px;
@@ -58,18 +58,24 @@
 	&__body {
 		transform: scale(0);
 		transition: all 0.3s ease 0s;
-		background-color: #fff;
-		padding: 50px;
+		@include adaptiv-value("padding-top", 50, 40, 1);
+		@include adaptiv-value("padding-right", 100, 20, 1);
+		@include adaptiv-value("padding-bottom", 40, 34, 1);
+		@include adaptiv-value("padding-left", 98, 20, 1);
 		width: 100%;
-		max-width: 800px;
+		@include adaptiv-value("max-width", 599, 290, 1);
+		background-color: $greenColor;
+		&_white {
+			background-color: #fff;
+		}
 	}
 	// .popup__close
 	&__close {
-		@include adaptiv-value("width", 50, 24, 1);
-		@include adaptiv-value("height", 50, 24, 1);
+		@include adaptiv-value("width", 33, 24, 1);
+		@include adaptiv-value("height", 33, 24, 1);
 		position: absolute;
-		top: 18px;
-		right: 18px;
+		@include adaptiv-value("top", 22, 14, 1);
+		@include adaptiv-value("right", 18, 5, 1);
 		cursor: pointer;
 		z-index: 30;
 		background-color: transparent;
@@ -78,9 +84,78 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			fill: #828282;
+			fill: #fff;
+		}
+		&_gray {
+			svg {
+				fill: $mainColor;
+			}
 		}
 	}
 }
 //====================================================================================================
+.popup__text-ok {
+	font-size: 20px;
+	line-height: math.div(27, 20) * 100%;
+	color: #fff;
+	p {
+		margin: 0px 0px 15px 0px;
+	}
+}
 //====================================================================================================
+.popup {
+	// .popup__barrier
+	&__barrier {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+.barrier {
+	text-transform: uppercase;
+	color: $mainColor;
+
+	// .barrier__title
+	&__title {
+		@include adaptiv-value("font-size", 30, 24, 1);
+		line-height: 140%;
+		text-align: center;
+		margin: 0px 0px 20px 0px;
+	}
+	// .barrier__subtitle
+	&__subtitle {
+		font-size: 20px;
+		@include adaptiv-value("font-size", 20, 16, 1);
+		line-height: 140%;
+		text-align: center;
+		margin: 0px 0px 20px 0px;
+	}
+	// .barrier__image
+	&__image {
+		width: 200px;
+		height: 157px;
+	}
+}
+//========================================================================================================================================================
+.ok {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	// .ok__image
+	&__image {
+		width: 100px;
+		height: 87px;
+	}
+	// .ok__text
+	&__text {
+		text-transform: uppercase;
+		color: $mainColor;
+		font-size: 20px;
+		@include adaptiv-value("font-size", 20, 16, 1);
+		line-height: 140%;
+		p {
+			margin: 0px 0px 15px 0px;
+		}
+	}
+}

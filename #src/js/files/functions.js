@@ -155,11 +155,35 @@ if (title) {
 }
 //=================
 //Tabs
+// let tabs = document.querySelectorAll("._tabs");
+// for (let index = 0; index < tabs.length; index++) {
+// 	let tab = tabs[index];
+// 	let tabs_items = tab.querySelectorAll("._tabs-item");
+// 	let tabs_blocks = tab.querySelectorAll("._tabs-block");
+// 	for (let index = 0; index < tabs_items.length; index++) {
+// 		let tabs_item = tabs_items[index];
+// 		tabs_item.addEventListener("click", function (e) {
+// 			for (let index = 0; index < tabs_items.length; index++) {
+// 				let tabs_item = tabs_items[index];
+// 				tabs_item.classList.remove('_active');
+// 				tabs_blocks[index].classList.remove('_active');
+// 			}
+// 			tabs_item.classList.add('_active');
+// 			tabs_blocks[index].classList.add('_active');
+// 			e.preventDefault();
+// 		});
+// 	}
+// }
+//========================================================================================================================================================
+// Tabs for THIS PROJECT
 let tabs = document.querySelectorAll("._tabs");
+let detailsDots = document.querySelectorAll('.details__dot');
 for (let index = 0; index < tabs.length; index++) {
 	let tab = tabs[index];
 	let tabs_items = tab.querySelectorAll("._tabs-item");
 	let tabs_blocks = tab.querySelectorAll("._tabs-block");
+	let tabsCloseIcon = tab.querySelectorAll(".block__close-icon");
+	let tabsCloseBtn = tab.querySelectorAll(".block__close");
 	for (let index = 0; index < tabs_items.length; index++) {
 		let tabs_item = tabs_items[index];
 		tabs_item.addEventListener("click", function (e) {
@@ -167,14 +191,41 @@ for (let index = 0; index < tabs.length; index++) {
 				let tabs_item = tabs_items[index];
 				tabs_item.classList.remove('_active');
 				tabs_blocks[index].classList.remove('_active');
+				detailsDots.forEach(dot => {
+					dot.style.zIndex = "-1";
+				});
 			}
 			tabs_item.classList.add('_active');
 			tabs_blocks[index].classList.add('_active');
 			e.preventDefault();
 		});
 	}
+	tabsCloseIcon.forEach(item => {
+		item.addEventListener('click', function () {
+			for (let index = 0; index < tabs_items.length; index++) {
+				let tabs_item = tabs_items[index];
+				tabs_item.classList.remove('_active');
+				tabs_blocks[index].classList.remove('_active');
+			}
+			detailsDots.forEach(dot => {
+				dot.style.zIndex = "4";
+			});
+		});
+	});
+	tabsCloseBtn.forEach(item => {
+		item.addEventListener('click', function () {
+			for (let index = 0; index < tabs_items.length; index++) {
+				let tabs_item = tabs_items[index];
+				tabs_item.classList.remove('_active');
+				tabs_blocks[index].classList.remove('_active');
+			}
+			detailsDots.forEach(dot => {
+				dot.style.zIndex = "4";
+			});
+		});
+	});
 }
-//=================
+//========================================================================================================================================================
 //Spollers
 let spollers = document.querySelectorAll("._spoller");
 let spollersGo = true;
