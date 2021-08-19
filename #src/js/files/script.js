@@ -32,7 +32,20 @@ window.onload = function () {
 				});
 			}
 		}
-		//========================================================================================================================================================
+		//работа фильтров Сортировать и Вид в блоке catalog========================================================================================================================================================
+		if (targetElement.classList.contains('custom-select__top')) {
+			targetElement.closest('.custom-select').classList.toggle('custom-select--open');
+		}
+		if (targetElement.classList.contains('custom-select__item')) {
+
+			let text = targetElement.textContent;
+			let topBlock = targetElement.closest('.custom-select').querySelector('.custom-select__top');
+			let topText = topBlock.textContent;
+
+			topBlock.textContent = text;
+			targetElement.textContent = topText;
+			targetElement.closest('.custom-select').classList.toggle('custom-select--open');
+		}
 
 
 	}

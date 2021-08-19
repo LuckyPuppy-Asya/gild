@@ -137,7 +137,7 @@
 								<div class="left__item one">
 									<h2 class="left__title title">Что вам может быть интересно?</h2>
 								</div>
-								<a href="#" class="left__item two _simple-go _ibg">
+								<a href="#" data-goto=".catalog" class="left__item two _simple-go _ibg">
 									<img src="img/grid/02.jpg" alt="">
 									<div class="two__abs-image _ibg">
 										<img src="img/grid/22.png" alt="">
@@ -262,13 +262,14 @@
 							</a>
 						</div>
 						<div class="adapt__column">
-							<div class="adapt__item adapt__item_high adapt__item_oh two _ibg">
+							<a href="#" data-goto=".catalog"
+								class="adapt__item adapt__item_high adapt__item_oh two  _simple-go _ibg">
 								<img src="img/grid/02.jpg" alt="">
-								<div class="two__abs-image _ibg">
+								<span class="two__abs-image _ibg">
 									<img src="img/grid/22.png" alt="">
-								</div>
-								<a href="" class="two__abs absolute">Каталог кухонь</a>
-							</div>
+								</span>
+								<span class="two__abs absolute">Каталог кухонь</span>
+							</a>
 						</div>
 						<div class="adapt__column">
 							<div class="adapt__item adapt__item_high two _ibg">
@@ -301,13 +302,13 @@
 							<img src="img/grid/4.jpg" alt="">
 							<span class="four__abs absolute">Элементы кухни</span>
 						</a>
-						<div class="grid-mobile__item mobile-two _ibg">
+						<a href="#" data-goto=".catalog" class="grid-mobile__item mobile-two _simple-go _ibg">
 							<img src="img/grid/02.jpg" alt="">
-							<div class="mobile-two__abs-image _ibg">
+							<span class="mobile-two__abs-image _ibg">
 								<img src="img/grid/22.png" alt="">
-							</div>
-							<a href="" class="mobile-two__abs absolute">Каталог кухонь</a>
-						</div>
+							</span>
+							<span class="mobile-two__abs absolute">Каталог кухонь</span>
+						</a>
 						<a href="#barrier" class="grid-mobile__item mobile-nine _popup-link _ibg">
 							<img src="img/grid/9.png" alt="">
 						</a>
@@ -1078,7 +1079,51 @@
 			</section>
 			<section class="page__catalog catalog">
 				<div class="catalog__container _container">
-					<div class="catalog__title title"></div>
+					<div class="catalog__title title">Каталог кухонь на заказ</div>
+					<div class="catalog__streamer streamer">
+						<button type="button" class="streamer__filters-reset">Сбросить фильтры</button>
+						<div class="streamer__founded founded">
+							<div class="founded__text">Найдено:</div>
+							<div class="founded__qty">256</div>
+						</div>
+						<div class="streamer__filter-sort opts-item">
+							<span class="streamer__filter-label opts-caption">Сортировать:</span>
+							<div class="custom-select custom-select_streamer" tabindex="0">
+								<div class="custom-select__top">по умолчанию</div>
+								<div class="custom-select__dropdown">
+									<ul class="custom-select__list">
+										<li class="custom-select__item">по цене</li>
+										<li class="custom-select__item">по форме</li>
+										<li class="custom-select__item">по цвету</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="streamer__filter-view opts-item">
+							<span class="streamer__filter-label opts-caption">Вид:</span>
+							<div class="custom-select custom-select_streamer" tabindex="0">
+								<div class="custom-select__top">3 модели в ряд</div>
+								<div class="custom-select__dropdown">
+									<ul class="custom-select__list">
+										<li class="custom-select__item">2 модели в ряд</li>
+										<li class="custom-select__item">4 модели в ряд</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="streamer__search search-streamer">
+							<form action="./server.php" method="POST" class="search-streamer__item" data-message="ok"
+								data-ajax="true">
+								<input autocomplete="off" type="text" name="form[search]" data-value="Введите номер модели"
+									class="search-streamer__input">
+								<button type="submit" class="search-streamer__btn">
+									<svg>
+										<use xlink:href="sprite.svg#search"></use>
+									</svg>
+								</button>
+							</form>
+						</div>
+					</div>
 				</div>
 			</section>
 			<div class="next"></div>
