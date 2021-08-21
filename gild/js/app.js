@@ -1275,7 +1275,7 @@ window.onload = function () {
 	// Actions (делегирование события click)
 	function documentActions(e) {
 		const targetElement = e.target;
-		console.log(targetElement, 111);
+		// console.log(targetElement, 111);
 
 		//по клику на желтые пункты на фото срабатывают табы========================================================================================================================================================
 
@@ -1825,38 +1825,134 @@ if (quantityButtons.length > 0) {
 }
 
 //RANGE
-const priceSlider = document.querySelector('.price-filter__slider');
-if (priceSlider) {
+// const priceSlider = document.querySelector('.price-filter__slider');
+// if (priceSlider) {
 
-	let textFrom = priceSlider.getAttribute('data-from');
-	let textTo = priceSlider.getAttribute('data-to');
+// 	let textFrom = priceSlider.getAttribute('data-from');
+// 	let textTo = priceSlider.getAttribute('data-to');
 
-	noUiSlider.create(priceSlider, {
-		start: [0, 200000],
+// 	noUiSlider.create(priceSlider, {
+// 		start: [0, 200000],
+// 		connect: true,
+// 		tooltips: [wNumb({ decimals: 0, prefix: textFrom + ' ' }), wNumb({ decimals: 0, prefix: textTo + ' ' })],
+// 		range: {
+// 			'min': [0],
+// 			'max': [200000]
+// 		}
+// 	});
+
+// 	/*
+// 	const priceStart = document.getElementById('price-start');
+// 	const priceEnd = document.getElementById('price-end');
+// 	priceStart.addEventListener('change', setPriceValues);
+// 	priceEnd.addEventListener('change', setPriceValues);
+// 	*/
+
+// 	function setPriceValues() {
+// 		let priceStartValue;
+// 		let priceEndValue;
+// 		if (priceStart.value != '') {
+// 			priceStartValue = priceStart.value;
+// 		}
+// 		if (priceEnd.value != '') {
+// 			priceEndValue = priceEnd.value;
+// 		}
+// 		priceSlider.noUiSlider.set([priceStartValue, priceEndValue]);
+// 	}
+// }
+//========================================================================================================================================================
+
+//RANGE для площади кухни и погонных метров
+const squareSlider = document.querySelector('.square__range');
+if (squareSlider) {
+
+	// let textFrom = priceSlider.getAttribute('data-from');
+	// let textTo = priceSlider.getAttribute('data-to');
+
+	noUiSlider.create(squareSlider, {
+		start: [4, 30],
 		connect: true,
-		tooltips: [wNumb({ decimals: 0, prefix: textFrom + ' ' }), wNumb({ decimals: 0, prefix: textTo + ' ' })],
+		// step: 1,
+		// tooltips: [wNumb({ decimals: 0, prefix: textFrom + ' ' }), wNumb({ decimals: 0, prefix: textTo + ' ' })],
+		tooltips: [wNumb({ decimals: 0 }), wNumb({ decimals: 0 })],
 		range: {
 			'min': [0],
-			'max': [200000]
+			'max': [30]
 		}
 	});
 
-	/*
-	const priceStart = document.getElementById('price-start');
-	const priceEnd = document.getElementById('price-end');
-	priceStart.addEventListener('change', setPriceValues);
-	priceEnd.addEventListener('change', setPriceValues);
-	*/
 
-	function setPriceValues() {
-		let priceStartValue;
-		let priceEndValue;
-		if (priceStart.value != '') {
-			priceStartValue = priceStart.value;
+	const squareStart = document.getElementById('square-start');
+	const squareEnd = document.getElementById('square-end');
+	const squareInputs = [squareStart, squareEnd];
+
+	squareSlider.noUiSlider.on('update', function (values, handle) {
+		squareInputs[handle].value = Math.round(values[handle]);
+	});
+
+	squareStart.addEventListener('change', setSquareValues);
+	squareEnd.addEventListener('change', setSquareValues);
+
+
+	function setSquareValues() {
+		let squareStartValue;
+		let squareEndValue;
+		if (squareStart.value != '') {
+			squareStartValue = squareStart.value;
 		}
-		if (priceEnd.value != '') {
-			priceEndValue = priceEnd.value;
+		if (squareEnd.value != '') {
+			squareEndValue = squareEnd.value;
 		}
-		priceSlider.noUiSlider.set([priceStartValue, priceEndValue]);
+		squareSlider.noUiSlider.set([squareStartValue, squareEndValue]);
 	}
+
 }
+
+
+
+const metersSlider = document.querySelector('.meters__range');
+if (metersSlider) {
+
+	// let textFrom = priceSlider.getAttribute('data-from');
+	// let textTo = priceSlider.getAttribute('data-to');
+
+	noUiSlider.create(metersSlider, {
+		start: [2, 10],
+		connect: true,
+		// step: 1,
+		// tooltips: [wNumb({ decimals: 0, prefix: textFrom + ' ' }), wNumb({ decimals: 0, prefix: textTo + ' ' })],
+		tooltips: [wNumb({ decimals: 0 }), wNumb({ decimals: 0 })],
+		range: {
+			'min': [0],
+			'max': [10]
+		}
+	});
+
+
+	const metersStart = document.getElementById('meters-start');
+	const metersEnd = document.getElementById('meters-end');
+
+	const metersInputs = [metersStart, metersEnd];
+	metersSlider.noUiSlider.on('update', function (values, handle) {
+		metersInputs[handle].value = Math.round(values[handle]);
+	});
+
+
+	metersStart.addEventListener('change', setMetersValues);
+	metersEnd.addEventListener('change', setMetersValues);
+
+	function setMetersValues() {
+		let metersStartValue;
+		let metersEndValue;
+		if (metersStart.value != '') {
+			metersStartValue = metersStart.value;
+		}
+		if (metersEnd.value != '') {
+			metersEndValue = metersEnd.value;
+		}
+		metersSlider.noUiSlider.set([metersStartValue, metersEndValue]);
+	}
+
+}
+//========================================================================================================================================================
+

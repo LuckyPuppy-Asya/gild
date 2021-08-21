@@ -172,6 +172,11 @@ textarea.input {
 //<CHECK (chk+tab)>====================================================================================================
 .checkbox {
 	position: relative;
+	// .checkbox__label
+	&__label {
+		display: block;
+		margin: 0px 0px 9px 0px;
+	}
 	// .checkbox__input
 	&__input {
 		position: absolute;
@@ -180,7 +185,7 @@ textarea.input {
 		opacity: 0;
 		visibility: hidden;
 		&:checked + .checkbox__text:before {
-			background: green url("../img/icons/check.svg") center no-repeat;
+			background: url("../img/icons/check-mark.svg") center no-repeat;
 		}
 	}
 	// .checkbox__text
@@ -188,22 +193,22 @@ textarea.input {
 		display: inline-flex;
 		align-items: center;
 		position: relative;
-		font-size: 16px;
-		color: #ffffff;
+		font-size: 12px;
+		color: $mainColor;
 		letter-spacing: -0.3px;
-		line-height: calc(20 / 16);
+		line-height: 113%;
 		cursor: pointer;
 		&:before {
 			content: "";
 			align-self: flex-start;
-			margin: 0px 14px 0px 0px;
-			flex: 0 0 20px;
+			margin: 0px 7px 0px 0px;
+			flex: 0 0 16px;
 			left: 0;
 			top: 0;
-			width: 20px;
-			height: 18px;
+			width: 16px;
+			height: 15px;
 			background: #fff;
-			border: 1px solid #a7a9ac;
+			border: 2px solid $yellowColor;
 		}
 	}
 	a {
@@ -257,33 +262,34 @@ textarea.input {
 		display: inline-flex;
 		align-items: center;
 		position: relative;
-		font-size: 16px;
-		color: #ffffff;
+		font-size: 12px;
+		color: $mainColor;
 		letter-spacing: -0.3px;
-		line-height: calc(20 / 16);
+		line-height: 113%;
+		padding: 0px 0px 10px 0px;
 		&:before {
 			content: "";
 			align-self: flex-start;
-			margin: 0px 14px 0px 0px;
-			flex: 0 0 20px;
+			margin: 0px 8px 0px 0px;
+			flex: 0 0 16px;
 			left: 0;
 			top: 0;
 			border-radius: 50%;
-			width: 20px;
-			height: 18px;
+			width: 16px;
+			height: 16px;
 			background: #fff;
-			border: 1px solid #a7a9ac;
+			border: 2px solid $yellowColor;
 		}
 		&:after {
 			content: "";
 			transition: all 0.3s ease 0s;
 			transform: scale(0);
-			width: 10px;
-			height: 10px;
+			width: 8px;
+			height: 8px;
 			border-radius: 50%;
-			background-color: #77243a;
+			background-color: $yellowColor;
 			position: absolute;
-			left: 5px;
+			left: 4px;
 			top: 4px;
 		}
 	}

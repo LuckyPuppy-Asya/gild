@@ -91,52 +91,30 @@
 	height: 18px;
 }
 .noUi-horizontal .noUi-handle {
-	width: 23px;
-	height: 23px;
-	right: -11.5px;
-	top: -10px;
-}
-.noUi-vertical {
 	width: 18px;
-}
-.noUi-vertical .noUi-handle {
-	width: 28px;
-	height: 34px;
-	right: -6px;
-	top: -17px;
+	height: 18px;
+	right: -9px;
+	top: -6px;
 }
 .noUi-txt-dir-rtl.noUi-horizontal .noUi-handle {
-	left: -17px;
+	left: -9px;
 	right: auto;
 }
 /* Styling;
  * Giving the connect element a border radius causes issues with using transform: scale
  */
 .noUi-target {
-	height: 4px;
-	background-color: #eaeaea;
-	margin: 0px 11px 50px;
+	height: 10px;
+	background-color: #fff;
+	border: 0.5px solid #575b5e;
+	border-radius: 5px;
+	margin: 0px 0px 50px;
 	position: relative;
-	&::before,
-	&::after {
-		content: "";
-		background-color: #eaeaea;
-		width: 11px;
-		height: 4px;
-		position: absolute;
-		top: 0;
-	}
-	&::before {
-		left: -10px;
-	}
-	&::after {
-		right: -10px;
-	}
 }
 .noUi-connects {
 }
 .noUi-connect {
-	background-color: #ffcda5;
+	background: linear-gradient(180deg, #f5d89f 0%, #ddb15c 100%);
 }
 /* Handles and cursors;
  */
@@ -147,19 +125,20 @@
 	cursor: ns-resize;
 }
 .noUi-handle {
-	border: 1px solid #f68038;
-	background-color: #ffffff;
+	border: 1px solid #c4c4c4;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+	background-color: #fff;
 	border-radius: 50%;
 	cursor: default;
 	&::after {
 		content: "";
-		width: 15px;
-		height: 15px;
+		width: 12px;
+		height: 12px;
 		position: absolute;
-		left: 3px;
-		top: 3px;
+		left: 2px;
+		top: 2px;
 		border-radius: 50%;
-		background-color: #f68038;
+		background: linear-gradient(180deg, #f5d89f 0%, #ddb15c 100%);
 	}
 }
 .noUi-active {
@@ -272,6 +251,7 @@
 	width: 15px;
 }
 .noUi-tooltip {
+	display: none;
 	color: #999999;
 	font-size: 12px;
 	position: absolute;
