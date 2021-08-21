@@ -237,6 +237,7 @@ textarea.input {
 	align-items: flex-start;
 	// .options__item
 	&__item {
+		display: block;
 		position: relative;
 		cursor: pointer;
 		&._error {

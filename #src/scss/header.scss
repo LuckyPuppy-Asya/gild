@@ -38,7 +38,7 @@
 	}
 	// .up-header__item
 	&__item {
-		@media (min-width: $md1+px) {
+		@media (min-width: 1213px) {
 			margin: 0px 0px 0px 47px;
 			&:last-child {
 				margin: 0px 10px 0px 47px;
@@ -108,7 +108,7 @@
 	}
 	// .favourite__name
 	&__name {
-		@media (min-width: $md1+px) {
+		@media (min-width: 1213px) {
 			display: none;
 		}
 		@media (max-width: $md1+px) {
@@ -176,7 +176,7 @@
 	}
 	// .down-header__menu
 	&__menu {
-		@media (min-width: $md1+px) {
+		@media (min-width: 1213px) {
 			flex: 1 1 auto;
 		}
 	}
@@ -285,14 +285,14 @@
 	}
 	// .menu__list
 	&__list {
-		@media (min-width: $md1+px) {
+		@media (min-width: 1213px) {
 			display: flex;
 			align-items: stretch;
 		}
 	}
 	// .menu__item
 	&__item {
-		@media (min-width: $md1+px) {
+		@media (min-width: 1213px) {
 			border-left: 0.4px solid rgba(218, 232, 228, 0.92);
 			padding: 19px 0px;
 		}
@@ -355,7 +355,7 @@
 	}
 }
 .media {
-	@media (min-width: $md1+px) {
+	@media (min-width: 1213px) {
 		flex: 0 0 130px;
 		display: flex;
 		flex-direction: column;
@@ -562,7 +562,7 @@
 			object-fit: cover;
 			fill: #44bf70;
 		}
-		@media (min-width: $md1+px) {
+		@media (min-width: 1213px) {
 			margin: 0px 0px 12px 0px;
 		}
 		@media (max-width: $md1+px) {
@@ -581,7 +581,7 @@
 	}
 }
 .info {
-	@media (min-width: $md1+px) {
+	@media (min-width: 1213px) {
 		flex: 1 1 auto;
 		display: flex;
 		flex-direction: column;
@@ -617,7 +617,7 @@
 	}
 	// .info__phones
 	&__phones {
-		@media (min-width: $md1+px) {
+		@media (min-width: 1213px) {
 			margin: 0px 0px 6px 0px;
 		}
 		@media (max-width: $md1+px) {
@@ -635,7 +635,7 @@
 		font-size: 15px;
 		color: #43474a;
 		transition: all 0.3s ease 0s;
-		@media (min-width: $md1+px) {
+		@media (min-width: 1213px) {
 			margin: 0px 0px 4px 0px;
 		}
 		@media (max-width: $md1+px) {

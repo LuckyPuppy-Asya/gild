@@ -40,6 +40,20 @@
 			}
 		}
 	}
+	// .custom-select__btn
+	&__btn {
+		background-color: transparent;
+		transition: color 0.3s ease 0s;
+		color: #1db28f;
+		font-size: 16px;
+		line-height: 110%;
+		letter-spacing: 0.02em;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $yellowColor;
+			}
+		}
+	}
 	// .custom-select__dropdown
 	&__dropdown {
 		display: none;
@@ -71,6 +85,26 @@
 		}
 	}
 }
+//========================================================================================================================================================
+.custom-select {
+	// .custom-select_streamer
+	&_streamer {
+	}
+	// .custom-select__top
+	&__top {
+	}
+
+	// .custom-select__dropdown
+	&__dropdown {
+	}
+	// .custom-select__list
+	&__list {
+	}
+	// .custom-select__item
+	&__item {
+	}
+}
+
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
 //<ГОТОВЫЕ КЛАССЫ>====================================================================================================

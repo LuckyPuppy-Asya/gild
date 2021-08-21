@@ -1,0 +1,74 @@
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+.title {
+	font-weight: 600;
+	@include adaptiv-value("font-size", 52, 21, 1);
+	line-height: 110%;
+	color: #575b5e;
+	@media (max-width: $md3+px) {
+		text-align: center;
+	}
+}
+.opts-item {
+	display: flex;
+	align-items: center;
+}
+.opts-caption {
+	display: inline-block;
+	margin: 0px 5px 0px 0px;
+}
+.custom-select {
+	position: relative;
+	min-width: 115px;
+	user-select: none;
+	&--open {
+		.custom-select__dropdown {
+			display: block;
+		}
+	}
+	// .custom-select_streamer
+	&_streamer {
+	}
+	// .custom-select__top
+	&__top {
+		position: relative;
+		cursor: pointer;
+		transition: color 0.3s ease 0s;
+		color: #1db28f;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $yellowColor;
+			}
+		}
+	}
+	// .custom-select__dropdown
+	&__dropdown {
+		display: none;
+		position: absolute;
+		right: 0;
+		top: calc(100% + 2px);
+		z-index: 20;
+		background-color: #fcfcfc;
+		width: calc(100% + 40px);
+		padding: 10px 5px 10px 10px;
+		border: 1px solid #575b5e;
+		border-radius: 5px;
+		color: #1db28f;
+	}
+	// .custom-select__list
+	&__list {
+	}
+	// .custom-select__item
+	&__item {
+		cursor: pointer;
+		transition: color 0.3s ease 0s;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $yellowColor;
+			}
+		}
+	}
+}
+//</ОСНОВНОЙ БЛОК>====================================================================================================

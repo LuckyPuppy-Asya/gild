@@ -89,7 +89,8 @@
 								</ul>
 							</div>
 						</div>
-						<div class="intro__right"></div>
+						<div class="intro__right">
+						</div>
 					</div>
 				</div>
 			</section>
@@ -139,9 +140,9 @@
 								</div>
 								<a href="#" data-goto=".catalog" class="left__item two _simple-go _ibg">
 									<img src="img/grid/02.jpg" alt="">
-									<div class="two__abs-image _ibg">
+									<span class="two__abs-image _ibg">
 										<img src="img/grid/22.png" alt="">
-									</div>
+									</span>
 									<span class="two__abs absolute">Каталог кухонь</span>
 								</a>
 								<div class="left__item three _ibg">
@@ -1102,11 +1103,17 @@
 						<div class="streamer__filter-view opts-item">
 							<span class="streamer__filter-label opts-caption">Вид:</span>
 							<div class="custom-select custom-select_streamer" tabindex="0">
-								<div class="custom-select__top">3 модели в ряд</div>
+								<div class="custom-select__top"><button class="custom-select__btn _current" data-columns="3">3
+										модели в
+										ряд</button></div>
 								<div class="custom-select__dropdown">
 									<ul class="custom-select__list">
-										<li class="custom-select__item">2 модели в ряд</li>
-										<li class="custom-select__item">4 модели в ряд</li>
+										<li class="custom-select__item"><button class="custom-select__btn" data-columns="2">2
+												модели в
+												ряд</button></li>
+										<li class="custom-select__item"><button class="custom-select__btn" data-columns="4">4
+												модели в
+												ряд</button></li>
 									</ul>
 								</div>
 							</div>
@@ -1173,7 +1180,7 @@
 								<li class="filters-catalog__par par">
 									<div data-spoller class="par__btn">
 										<span class="par__name">Cтоимость</span>
-										<span class="par__arrow">
+										<span class="par__arrow par__arrow_mob">
 											<svg>
 												<use xlink:href="sprite.svg#arrow-down"></use>
 											</svg>
@@ -1209,7 +1216,7 @@
 								<li class="filters-catalog__par par">
 									<div data-spoller class="par__btn">
 										<span class="par__name">Площадь кухни</span>
-										<span class="par__arrow">
+										<span class="par__arrow par__arrow_mob">
 											<svg>
 												<use xlink:href="sprite.svg#arrow-down"></use>
 											</svg>
@@ -1234,7 +1241,7 @@
 								<li class="filters-catalog__par par">
 									<div data-spoller class="par__btn">
 										<span class="par__name">Погонные метры</span>
-										<span class="par__arrow">
+										<span class="par__arrow par__arrow_mob">
 											<svg>
 												<use xlink:href="sprite.svg#arrow-down"></use>
 											</svg>
@@ -1259,7 +1266,7 @@
 								<li class="filters-catalog__par par">
 									<div data-spoller class="par__btn">
 										<span class="par__name">Популярные категории</span>
-										<span class="par__arrow">
+										<span class="par__arrow par__arrow_mob">
 											<svg>
 												<use xlink:href="sprite.svg#arrow-down"></use>
 											</svg>
@@ -1291,7 +1298,7 @@
 								<li class="filters-catalog__par par">
 									<div data-spoller class="par__btn">
 										<span class="par__name">Стиль</span>
-										<span class="par__arrow">
+										<span class="par__arrow par__arrow_mob">
 											<svg>
 												<use xlink:href="sprite.svg#arrow-down"></use>
 											</svg>
@@ -1311,7 +1318,7 @@
 								<li class="filters-catalog__par par">
 									<div data-spoller class="par__btn">
 										<span class="par__name">Форма кухни</span>
-										<span class="par__arrow">
+										<span class="par__arrow par__arrow_mob">
 											<svg>
 												<use xlink:href="sprite.svg#arrow-down"></use>
 											</svg>
@@ -1333,12 +1340,328 @@
 									</div>
 								</li>
 							</ul>
-
-
-
-
+							<div class="filters-catalog__name filters-catalog__name_pc">
+								<div class="filters-catalog__title">Дополнительные фильтры </div>
+							</div>
+							<ul data-spollers class="filters-catalog__list">
+								<li class="filters-catalog__par par">
+									<div data-spoller class="par__btn">
+										<span class="par__name">Особенности формы</span>
+										<span class="par__arrow">
+											<svg>
+												<use xlink:href="sprite.svg#arrow-down"></use>
+											</svg>
+										</span>
+									</div>
+									<div class="par__checkbox checkbox">
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" value="1" name="form[checkbox_2_1]">
+											<span class="checkbox__text">С барной стойкой</span>
+										</label>
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" value="1" name="form[checkbox_2_2]">
+											<span class="checkbox__text">С островом</span>
+										</label>
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" value="1" name="form[checkbox_2_3]">
+											<span class="checkbox__text">С антресолью</span>
+										</label>
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" value="1" name="form[checkbox_2_4]">
+											<span class="checkbox__text">Со встр. холодильником</span>
+										</label>
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" value="1" name="form[checkbox_2_5]">
+											<span class="checkbox__text">С пеналом</span>
+										</label>
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" value="1" name="form[checkbox_2_6]">
+											<span class="checkbox__text">С радиусными шкафами</span>
+										</label>
+									</div>
+								</li>
+								<li class="filters-catalog__par par">
+									<div data-spoller class="par__btn">
+										<span class="par__name">Общий цвет кухни</span>
+										<span class="par__arrow">
+											<svg>
+												<use xlink:href="sprite.svg#arrow-down"></use>
+											</svg>
+										</span>
+									</div>
+									<div class="par__options par__options_hide options">
+										<label class="options__item">
+											<input class="options__input" type="radio" value="1" name="form[option_5]">
+											<span class="options__text">Светлые</span>
+										</label>
+										<label class="options__item">
+											<input class="options__input" type="radio" value="2" name="form[option_5]">
+											<span class="options__text">Темные</span>
+										</label>
+										<label class="options__item">
+											<input class="options__input" type="radio" value="3" name="form[option_5]">
+											<span class="options__text">Яркие</span>
+										</label>
+									</div>
+								</li>
+								<li class="filters-catalog__par par">
+									<div data-spoller class="par__btn">
+										<span class="par__name">Поверхность фасада</span>
+										<span class="par__arrow">
+											<svg>
+												<use xlink:href="sprite.svg#arrow-down"></use>
+											</svg>
+										</span>
+									</div>
+									<div class="par__options par__options_hide options">
+										<label class="options__item">
+											<input class="options__input" type="radio" value="1" name="form[option_6]">
+											<span class="options__text">Глянцевые</span>
+										</label>
+										<label class="options__item">
+											<input class="options__input" type="radio" value="2" name="form[option_6]">
+											<span class="options__text">Матовые</span>
+										</label>
+									</div>
+								</li>
+								<li class="filters-catalog__par par">
+									<div data-spoller class="par__btn">
+										<span class="par__name">Цвет фасада</span>
+										<span class="par__arrow">
+											<svg>
+												<use xlink:href="sprite.svg#arrow-down"></use>
+											</svg>
+										</span>
+									</div>
+									<div class="par__checkbox checkbox">
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" value="1" name="form[checkbox_3_1]">
+											<span class="checkbox__text">Темный низ/светлый верх</span>
+										</label>
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" value="1" name="form[checkbox_3_2]">
+											<span class="checkbox__text">Комбинированные</span>
+										</label>
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" value="1" name="form[checkbox_3_3]">
+											<span class="checkbox__text">Белые</span>
+										</label>
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" value="1" name="form[checkbox_3_4]">
+											<span class="checkbox__text">Серые</span>
+										</label>
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" value="1" name="form[checkbox_3_5]">
+											<span class="checkbox__text">Черные</span>
+										</label>
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" value="1" name="form[checkbox_3_6]">
+											<span class="checkbox__text">Зеленые</span>
+										</label>
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" value="1" name="form[checkbox_3_7]">
+											<span class="checkbox__text">Фиолетовые</span>
+										</label>
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" value="1" name="form[checkbox_3_8]">
+											<span class="checkbox__text">Голубые</span>
+										</label>
+									</div>
+								</li>
+								<li class="filters-catalog__par par">
+									<div data-spoller class="par__btn">
+										<span class="par__name">Материал фартука</span>
+										<span class="par__arrow">
+											<svg>
+												<use xlink:href="sprite.svg#arrow-down"></use>
+											</svg>
+										</span>
+									</div>
+									<div class="par__options par__options_hide options">
+										<label class="options__item">
+											<input class="options__input" type="radio" value="1" name="form[option_7]">
+											<span class="options__text">Кафель/керамогранит</span>
+										</label>
+										<label class="options__item">
+											<input class="options__input" type="radio" value="2" name="form[option_7]">
+											<span class="options__text">Стеновая панель из пластика</span>
+										</label>
+										<label class="options__item">
+											<input class="options__input" type="radio" value="3" name="form[option_7]">
+											<span class="options__text">Стекло с фотопечатью</span>
+										</label>
+									</div>
+								</li>
+								<li class="filters-catalog__par par">
+									<div data-spoller class="par__btn">
+										<span class="par__name">Материал столешницы</span>
+										<span class="par__arrow">
+											<svg>
+												<use xlink:href="sprite.svg#arrow-down"></use>
+											</svg>
+										</span>
+									</div>
+									<div class="par__options par__options_hide options">
+										<label class="options__item">
+											<input class="options__input" type="radio" value="1" name="form[option_8]">
+											<span class="options__text">ДСП в пластике</span>
+										</label>
+										<label class="options__item">
+											<input class="options__input" type="radio" value="2" name="form[option_8]">
+											<span class="options__text">Искусственный камень</span>
+										</label>
+									</div>
+								</li>
+								<li class="filters-catalog__par par">
+									<div data-spoller class="par__btn">
+										<span class="par__name">Цвет столешницы</span>
+										<span class="par__arrow">
+											<svg>
+												<use xlink:href="sprite.svg#arrow-down"></use>
+											</svg>
+										</span>
+									</div>
+									<div class="par__checkbox checkbox">
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" value="1" name="form[checkbox_4_1]">
+											<span class="checkbox__text">Древесные</span>
+										</label>
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" value="1" name="form[checkbox_4_2]">
+											<span class="checkbox__text">Белые</span>
+										</label>
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" value="1" name="form[checkbox_4_3]">
+											<span class="checkbox__text">Черные</span>
+										</label>
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" value="1" name="form[checkbox_4_4]">
+											<span class="checkbox__text">Светлые</span>
+										</label>
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" value="1" name="form[checkbox_4_5]">
+											<span class="checkbox__text"> Темные</span>
+										</label>
+									</div>
+								</li>
+								<li class="filters-catalog__par par">
+									<div data-spoller class="par__btn">
+										<span class="par__name">Ручки</span>
+										<span class="par__arrow">
+											<svg>
+												<use xlink:href="sprite.svg#arrow-down"></use>
+											</svg>
+										</span>
+									</div>
+									<div class="par__options par__options_hide options">
+										<label class="options__item">
+											<input class="options__input" type="radio" value="1" name="form[option_9]">
+											<span class="options__text">Ручки-скобы</span>
+										</label>
+										<label class="options__item">
+											<input class="options__input" type="radio" value="2" name="form[option_9]">
+											<span class="options__text">Без-ручек</span>
+										</label>
+									</div>
+								</li>
+								<li class="filters-catalog__par par">
+									<div data-spoller class="par__btn">
+										<span class="par__name">Мойки</span>
+										<span class="par__arrow">
+											<svg>
+												<use xlink:href="sprite.svg#arrow-down"></use>
+											</svg>
+										</span>
+									</div>
+									<div class="par__options par__options_hide options">
+										<label class="options__item">
+											<input class="options__input" type="radio" value="1" name="form[option_10]">
+											<span class="options__text">Нержавеющая сталь</span>
+										</label>
+										<label class="options__item">
+											<input class="options__input" type="radio" value="2" name="form[option_10]">
+											<span class="options__text">Керамогранит</span>
+										</label>
+										<label class="options__item">
+											<input class="options__input" type="radio" value="2" name="form[option_10]">
+											<span class="options__text">Искусственный камень</span>
+										</label>
+									</div>
+								</li>
+								<li class="filters-catalog__par par">
+									<div data-spoller class="par__btn">
+										<span class="par__name">Бытовая техника</span>
+										<span class="par__arrow">
+											<svg>
+												<use xlink:href="sprite.svg#arrow-down"></use>
+											</svg>
+										</span>
+									</div>
+									<div class="par__options par__options_hide options">
+										<label class="options__item">
+											<input class="options__input" type="radio" value="1" name="form[option_11]">
+											<span class="options__text">Встроенная вытяжка</span>
+										</label>
+										<label class="options__item">
+											<input class="options__input" type="radio" value="2" name="form[option_11]">
+											<span class="options__text">Отдельная вытяжка</span>
+										</label>
+										<label class="options__item">
+											<input class="options__input" type="radio" value="2" name="form[option_11]">
+											<span class="options__text">Отдельная плита</span>
+										</label>
+										<label class="options__item">
+											<input class="options__input" type="radio" value="2" name="form[option_11]">
+											<span class="options__text">Встроенная духовка/варочная панель</span>
+										</label>
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" value="1" name="form[checkbox_5_1]">
+											<span class="checkbox__text">Посудомоечная машина</span>
+										</label>
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" value="1" name="form[checkbox_5_2]">
+											<span class="checkbox__text">Встроенная микроволновка</span>
+										</label>
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox" value="1" name="form[checkbox_5_3]">
+											<span class="checkbox__text">Телевизор</span>
+										</label>
+									</div>
+								</li>
+							</ul>
 						</form>
-						<div class="catalog__exhibition exhibition"></div>
+						<div class="catalog__exhibition exhibition">
+							<ul data-grid-columns="3" class="exhibition__row">
+								<li class="exhibition__column">
+									<article class="exhibition__kitchen kitchen _ibg">
+										<div class="kitchen__image">
+											<img src="img/exhibition/01.png" alt="">
+										</div>
+										<h4 class="kitchen__bottom">
+											Кухня МДФ в ПВХ «Модель 154»
+										</h4>
+										<div class="kitchen__cover cover">
+											<h4 class="cover__name">Кухня МДФ в ПВХ «Модель 154»</h4>
+											<a href="" class="cover__order">Заказать кухню</a>
+											<button class="cover__btn" type="button">Расчет цены</button>
+											<button class="cover__learn" type="button">
+												<span>Узнать подробнее</span>
+												<span class="cover__icon">
+													<svg>
+														<use xlink:href="sprite.svg#arrow-white"></use>
+													</svg>
+												</span>
+											</button>
+										</div>
+										<button type="button" class="kitchen__favorate">
+											<svg>
+												<use xlink:href="sprite.svg#heart"></use>
+											</svg>
+										</button>
+									</article>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</section>
