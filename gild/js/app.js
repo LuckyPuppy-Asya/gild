@@ -1275,8 +1275,8 @@ window.onload = function () {
 	// Actions (делегирование события click)
 	function documentActions(e) {
 		const targetElement = e.target;
-		// console.log(targetElement, 111);
-		// console.log(targetElement.closest('.custom-select__top'), 222);
+		console.log(targetElement, 111);
+
 		//по клику на желтые пункты на фото срабатывают табы========================================================================================================================================================
 
 		if (targetElement.classList.contains('details__dot') && targetElement.getAttribute('data-dot')) {
