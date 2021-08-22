@@ -66,24 +66,38 @@ window.onload = function () {
 			blockItem.appendChild(blockTopOld);
 			targetElement.closest('.custom-select').classList.toggle('custom-select--open');
 			exhibitionRow.dataset.gridColumns = columns;
-
-
-
-			// let text = targetElement.textContent;
-			// let topBlock = targetElement.closest('.custom-select').querySelector('.custom-select__top');
-			// let topText = topBlock.textContent;
-
-			// topBlock.textContent = text;
-			// targetElement.textContent = topText;
-			// targetElement.closest('.custom-select').classList.toggle('custom-select--open');
 		}
+		//на экранах ниже md2 открытие Сортировка и Фильтры========================================================================================================================================================
 
+		if (targetElement.classList.contains('joint__top')) {
+			document.querySelector('.sieve__dropdown').classList.remove('_active');
+			document.querySelector('.joint__dropdown').classList.toggle('_active');
+		}
+		if (targetElement.classList.contains('sieve__top')) {
+			document.querySelector('.joint__dropdown').classList.remove('_active');
+			document.querySelector('.sieve__dropdown').classList.toggle('_active');
+		}
+		//закрытие фильтров по крестику на экранах ниже md2========================================================================================================================================================
 
-
-
+		if (targetElement.classList.contains('filters-catalog__btn')) {
+			document.querySelector('.sieve__dropdown').classList.remove('_active');
+		}
+		//========================================================================================================================================================
+		if (targetElement.classList.contains('kitchen')) {
+			targetElement.querySelector('.cover').classList.add('_active');
+		}
+		if (targetElement.classList.contains('cover')) {
+			targetElement.classList.remove('_active');
+		}
 	}
 
 
+	if (window.innerWidth < 768) {
+		let x = document.querySelector('.custom-select__btn._current');
+
+		x.setAttribute('data-columns', '5');
+		console.log(x.dataset);
+	}
 
 
 }

@@ -1087,9 +1087,54 @@
 							<div class="founded__text">Найдено:</div>
 							<div class="founded__qty">256</div>
 						</div>
+						<div class="streamer__phase-two">
+							<div class="streamer__joint joint">
+								<div class="joint__top">
+									<div class="joint__label">Сортировка</div>
+									<div class="joint__icon _ibg">
+										<img src="img/exhibition/sort.png" alt="">
+									</div>
+								</div>
+								<form class="joint__dropdown">
+									<div class="joint__options options">
+										<label class="options__item">
+											<input class="options__input" type="radio" value="1" name="form[option_12]">
+											<span class="options__text">По умолчанию</span>
+										</label>
+										<label class="options__item">
+											<input class="options__input" type="radio" value="2" name="form[option_12]">
+											<span class="options__text">По возрастанию цены</span>
+										</label>
+										<label class="options__item">
+											<input class="options__input" type="radio" value="3" name="form[option_12]">
+											<span class="options__text">По убыванию цены </span>
+										</label>
+										<label class="options__item">
+											<input class="options__input" type="radio" value="4" name="form[option_12]">
+											<span class="options__text">Увеличение размера</span>
+										</label>
+										<label class="options__item">
+											<input class="options__input" type="radio" value="5" name="form[option_12]">
+											<span class="options__text">Уменьшение размера</span>
+										</label>
+									</div>
+								</form>
+							</div>
+							<div class="streamer__sieve sieve">
+								<div class="sieve__top">
+									<div class="sieve__label">Фильтры</div>
+									<div class="sieve__icon _ibg">
+										<img src="img/exhibition/union.png" alt="">
+									</div>
+									<div class="sieve__dropdown">
+
+									</div>
+								</div>
+							</div>
+						</div>
 						<div class="streamer__filter-sort opts-item">
 							<span class="streamer__filter-label opts-caption">Сортировать:</span>
-							<div class="custom-select custom-select_streamer" tabindex="0">
+							<div class="custom-select custom-select_streamer">
 								<div class="custom-select__top">по умолчанию</div>
 								<div class="custom-select__dropdown">
 									<ul class="custom-select__list">
@@ -1102,18 +1147,29 @@
 						</div>
 						<div class="streamer__filter-view opts-item">
 							<span class="streamer__filter-label opts-caption">Вид:</span>
-							<div class="custom-select custom-select_streamer" tabindex="0">
-								<div class="custom-select__top"><button class="custom-select__btn _current" data-columns="3">3
-										модели в
-										ряд</button></div>
+							<div class="custom-select custom-select_streamer">
+								<div class="custom-select__top">
+									<button class="custom-select__btn _current" data-columns="3">
+										3 модели в ряд
+									</button>
+								</div>
 								<div class="custom-select__dropdown">
 									<ul class="custom-select__list">
-										<li class="custom-select__item"><button class="custom-select__btn" data-columns="2">2
-												модели в
-												ряд</button></li>
-										<li class="custom-select__item"><button class="custom-select__btn" data-columns="4">4
-												модели в
-												ряд</button></li>
+										<li class="custom-select__item">
+											<button class="custom-select__btn" data-columns="1">
+												1 модель в ряд
+											</button>
+										</li>
+										<li class="custom-select__item">
+											<button class="custom-select__btn" data-columns="2">
+												2 модели в ряд
+											</button>
+										</li>
+										<li class="custom-select__item custom-select__item_four">
+											<button class="custom-select__btn" data-columns="4">
+												4 модели в ряд
+											</button>
+										</li>
 									</ul>
 								</div>
 							</div>
@@ -1132,7 +1188,7 @@
 						</div>
 					</div>
 					<div class="catalog__body">
-						<form class="catalog__filters filters-catalog form form_filters">
+						<form data-da=".sieve__dropdown,1212,0" class="catalog__filters filters-catalog form form_filters">
 							<div class="filters-catalog__results results-filters">
 								<div class="results-filters__column">
 									<div class="results-filters__text">от 120 тыс. руб до 160 тыс. руб</div>
@@ -1176,7 +1232,7 @@
 									</svg>
 								</button>
 							</div>
-							<ul data-spollers="991.98,max" class="filters-catalog__list">
+							<ul data-spollers="1212,max" class="filters-catalog__list">
 								<li class="filters-catalog__par par">
 									<div data-spoller class="par__btn">
 										<span class="par__name">Cтоимость</span>
@@ -1223,19 +1279,21 @@
 										</span>
 									</div>
 									<div class="par__square square">
-										<div class="square__inputs">
-											<label class="square__label">
-												<input id="square-start" autocomplete="off" type="text" name="form[range_1_1]"
-													class="square__input input" data-value="0">
-												<span class="square__text">кв.м.&nbsp;&nbsp;&nbsp;-</span>
-											</label>
-											<label class="square__label">
-												<input id="square-end" autocomplete="off" type="text" name="form[range_1_2]"
-													class="square__input input" data-value="30">
-												<span class="square__text">кв.м.</span>
-											</label>
+										<div class="square__wrapper">
+											<div class="square__inputs">
+												<label class="square__label">
+													<input id="square-start" autocomplete="off" type="text" name="form[range_1_1]"
+														class="square__input input" data-value="0">
+													<span class="square__text">кв.м.&nbsp;&nbsp;&nbsp;-</span>
+												</label>
+												<label class="square__label">
+													<input id="square-end" autocomplete="off" type="text" name="form[range_1_2]"
+														class="square__input input" data-value="30">
+													<span class="square__text">кв.м.</span>
+												</label>
+											</div>
+											<div class="square__range"></div>
 										</div>
-										<div class="square__range"></div>
 									</div>
 								</li>
 								<li class="filters-catalog__par par">
@@ -1248,19 +1306,21 @@
 										</span>
 									</div>
 									<div class="par__meters meters">
-										<div class="meters__inputs">
-											<label class="meters__label">
-												<input id="meters-start" autocomplete="off" type="text" name="form[range_2_1]"
-													class="meters__input input" data-value="0">
-												<span class="meters__text">п.м.&nbsp;&nbsp;&nbsp;-</span>
-											</label>
-											<label class="meters__label">
-												<input id="meters-end" autocomplete="off" type="text" name="form[range_2_2]"
-													class="meters__input input" data-value="30">
-												<span class="meters__text">п.м.</span>
-											</label>
+										<div class="meters__wrapper">
+											<div class="meters__inputs">
+												<label class="meters__label">
+													<input id="meters-start" autocomplete="off" type="text" name="form[range_2_1]"
+														class="meters__input input" data-value="0">
+													<span class="meters__text">п.м.&nbsp;&nbsp;&nbsp;-</span>
+												</label>
+												<label class="meters__label">
+													<input id="meters-end" autocomplete="off" type="text" name="form[range_2_2]"
+														class="meters__input input" data-value="30">
+													<span class="meters__text">п.м.</span>
+												</label>
+											</div>
+											<div class="meters__range"></div>
 										</div>
-										<div class="meters__range"></div>
 									</div>
 								</li>
 								<li class="filters-catalog__par par">
