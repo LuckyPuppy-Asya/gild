@@ -1275,7 +1275,7 @@ window.onload = function () {
 	// Actions (делегирование события click)
 	function documentActions(e) {
 		const targetElement = e.target;
-		console.log(targetElement, 111);
+		// console.log(targetElement, 111);
 
 		//по клику на желтые пункты на фото срабатывают табы========================================================================================================================================================
 
@@ -1347,7 +1347,7 @@ window.onload = function () {
 		if (targetElement.classList.contains('filters-catalog__btn')) {
 			document.querySelector('.sieve__dropdown').classList.remove('_active');
 		}
-		//========================================================================================================================================================
+		//На карточке накидывание покрывала========================================================================================================================================================
 		if (targetElement.classList.contains('kitchen')) {
 
 			targetElement.querySelector('.cover').classList.add('_active');
@@ -1355,10 +1355,110 @@ window.onload = function () {
 		if (targetElement.classList.contains('cover')) {
 			targetElement.classList.remove('_active');
 		}
+		//При клике на крестике выбранного элемента в results-filters его удаление========================================================================================================================================================
+
+		if (targetElement.classList.contains('results-filters__btn')) {
+			let resultsFiltersColumn = targetElement.closest('.results-filters__column');
+			let removeElem = targetElement.closest('.results-filters__column').dataset.choiceInput;
+
+			let uncheckElems = document.querySelectorAll(`[name="${removeElem}"]`);
+			uncheckElems.forEach(item => {
+				item.checked = false;
+			});
+			resultsFiltersColumn.remove();
+		}
+
+		//Работа кнопки Сбросить фильтры========================================================================================================================================================
+		if (targetElement.classList.contains('streamer__filters-reset')) {
+
+			squareSlider.noUiSlider.set([0, 30]);
+
+			const squareStart = document.getElementById('square-start');
+			const squareEnd = document.getElementById('square-end');
+			const squareInputs = [squareStart, squareEnd];
+
+			squareSlider.noUiSlider.on('set', function (values, handle) {
+				squareInputs[handle].value = Math.round(values[handle]);
+			});
+
+			metersSlider.noUiSlider.set([0, 10]);
+			const metersStart = document.getElementById('meters-start');
+			const metersEnd = document.getElementById('meters-end');
+			const metersInputs = [metersStart, metersEnd];
+			metersSlider.noUiSlider.on('set', function (values, handle) {
+				metersInputs[handle].value = Math.round(values[handle]);
+			});
+
+			document.querySelector('.filters-catalog__results').innerHTML = '';
+		}
 	}
 
 
 
+
+
+
+	//добавление в results-filters выбранной опции========================================================================================================================================================
+	//из checkbox===================================
+	let checkboxItems = document.querySelectorAll('.checkbox__label');
+	let optionsItems = document.querySelectorAll('.options__item');
+	let rangeItems = document.querySelectorAll('.square__label');
+	let resultsFilters = document.querySelector('.results-filters');
+
+
+	if (document.querySelector('.catalog__body')) {
+
+		const createChoiceItem = (text, nameInput) => {
+			return (
+				`
+				<div class="results-filters__column" data-choice-input="${nameInput}" data-choice-text="${text}">
+					<div class="results-filters__text">${text}</div>
+					<button type="button" class="results-filters__btn">
+						<svg>
+							<use xlink:href="sprite.svg#close"></use>
+						</svg>
+					</button>
+				</div>
+				`
+			);
+		};
+
+		checkboxItems.forEach(el => {
+			el.querySelector('input').addEventListener('change', (e) => {
+				let checked = el.querySelector('input').checked;
+				let text = el.querySelector('.checkbox__text').textContent;
+				if (checked) {
+					let nameInput = e.target.getAttribute('name');
+					resultsFilters.insertAdjacentHTML('beforeend', createChoiceItem(text, nameInput));
+
+				} else {
+					document.querySelector(`[data-choice-text="${text}"]`).remove();
+				}
+			});
+		});
+		//из radio=============================================
+		optionsItems.forEach(el => {
+
+			el.querySelector('input').addEventListener('click', (e) => {
+				let parent = el.closest('.options');
+				let optionsText = parent.querySelectorAll('.options__text');
+				optionsText.forEach(item => {
+					let text = item.textContent;
+					if (document.querySelector(`[data-choice-text="${text}"]`)) {
+						document.querySelector(`[data-choice-text="${text}"]`).remove();
+					}
+
+				});
+				let text = el.querySelector('.options__text').textContent;
+				let nameInput = e.target.getAttribute('name');
+				resultsFilters.insertAdjacentHTML('beforeend', createChoiceItem(text, nameInput));
+			});
+		});
+
+
+
+	}
+	//========================================================================================================================================================
 
 
 }
@@ -1913,7 +2013,7 @@ if (squareSlider) {
 	// let textTo = priceSlider.getAttribute('data-to');
 
 	noUiSlider.create(squareSlider, {
-		start: [4, 30],
+		start: [0, 30],
 		connect: true,
 		// step: 1,
 		// tooltips: [wNumb({ decimals: 0, prefix: textFrom + ' ' }), wNumb({ decimals: 0, prefix: textTo + ' ' })],
@@ -1931,6 +2031,31 @@ if (squareSlider) {
 
 	squareSlider.noUiSlider.on('update', function (values, handle) {
 		squareInputs[handle].value = Math.round(values[handle]);
+		let start = squareStart.value;
+		let end = squareEnd.value;
+		let resultsFilters = document.querySelector('.results-filters');
+
+		const createChoiceItem = (start, end) => {
+			return (
+				`
+				<div class="results-filters__column sq">
+					<div class="results-filters__text">Площадь кухни ${start} кв.м - ${end} кв.м</div>
+					<button type="button" class="results-filters__btn">
+						<svg>
+							<use xlink:href="sprite.svg#close"></use>
+						</svg>
+					</button>
+				</div>
+				`
+			);
+		};
+		if (document.querySelector('.sq')) {
+			document.querySelectorAll('.sq').forEach(item => {
+				item.remove();
+			});
+		}
+		resultsFilters.insertAdjacentHTML('beforeend', createChoiceItem(start, end));
+
 	});
 
 	squareStart.addEventListener('change', setSquareValues);
@@ -1960,7 +2085,7 @@ if (metersSlider) {
 	// let textTo = priceSlider.getAttribute('data-to');
 
 	noUiSlider.create(metersSlider, {
-		start: [2, 10],
+		start: [0, 10],
 		connect: true,
 		// step: 1,
 		// tooltips: [wNumb({ decimals: 0, prefix: textFrom + ' ' }), wNumb({ decimals: 0, prefix: textTo + ' ' })],
@@ -1978,6 +2103,30 @@ if (metersSlider) {
 	const metersInputs = [metersStart, metersEnd];
 	metersSlider.noUiSlider.on('update', function (values, handle) {
 		metersInputs[handle].value = Math.round(values[handle]);
+		let start = metersStart.value;
+		let end = metersEnd.value;
+		let resultsFilters = document.querySelector('.results-filters');
+
+		const createChoiceItem = (start, end) => {
+			return (
+				`
+				<div class="results-filters__column mt">
+					<div class="results-filters__text">Погонные метры ${start} п.м - ${end} п.м</div>
+					<button type="button" class="results-filters__btn">
+						<svg>
+							<use xlink:href="sprite.svg#close"></use>
+						</svg>
+					</button>
+				</div>
+				`
+			);
+		};
+		if (document.querySelector('.mt')) {
+			document.querySelectorAll('.mt').forEach(item => {
+				item.remove();
+			});
+		}
+		resultsFilters.insertAdjacentHTML('beforeend', createChoiceItem(start, end));
 	});
 
 

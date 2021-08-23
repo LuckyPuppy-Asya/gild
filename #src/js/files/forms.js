@@ -546,7 +546,7 @@ if (squareSlider) {
 	// let textTo = priceSlider.getAttribute('data-to');
 
 	noUiSlider.create(squareSlider, {
-		start: [4, 30],
+		start: [0, 30],
 		connect: true,
 		// step: 1,
 		// tooltips: [wNumb({ decimals: 0, prefix: textFrom + ' ' }), wNumb({ decimals: 0, prefix: textTo + ' ' })],
@@ -564,6 +564,31 @@ if (squareSlider) {
 
 	squareSlider.noUiSlider.on('update', function (values, handle) {
 		squareInputs[handle].value = Math.round(values[handle]);
+		let start = squareStart.value;
+		let end = squareEnd.value;
+		let resultsFilters = document.querySelector('.results-filters');
+
+		const createChoiceItem = (start, end) => {
+			return (
+				`
+				<div class="results-filters__column sq">
+					<div class="results-filters__text">Площадь кухни ${start} кв.м - ${end} кв.м</div>
+					<button type="button" class="results-filters__btn">
+						<svg>
+							<use xlink:href="sprite.svg#close"></use>
+						</svg>
+					</button>
+				</div>
+				`
+			);
+		};
+		if (document.querySelector('.sq')) {
+			document.querySelectorAll('.sq').forEach(item => {
+				item.remove();
+			});
+		}
+		resultsFilters.insertAdjacentHTML('beforeend', createChoiceItem(start, end));
+
 	});
 
 	squareStart.addEventListener('change', setSquareValues);
@@ -593,7 +618,7 @@ if (metersSlider) {
 	// let textTo = priceSlider.getAttribute('data-to');
 
 	noUiSlider.create(metersSlider, {
-		start: [2, 10],
+		start: [0, 10],
 		connect: true,
 		// step: 1,
 		// tooltips: [wNumb({ decimals: 0, prefix: textFrom + ' ' }), wNumb({ decimals: 0, prefix: textTo + ' ' })],
@@ -611,6 +636,30 @@ if (metersSlider) {
 	const metersInputs = [metersStart, metersEnd];
 	metersSlider.noUiSlider.on('update', function (values, handle) {
 		metersInputs[handle].value = Math.round(values[handle]);
+		let start = metersStart.value;
+		let end = metersEnd.value;
+		let resultsFilters = document.querySelector('.results-filters');
+
+		const createChoiceItem = (start, end) => {
+			return (
+				`
+				<div class="results-filters__column mt">
+					<div class="results-filters__text">Погонные метры ${start} п.м - ${end} п.м</div>
+					<button type="button" class="results-filters__btn">
+						<svg>
+							<use xlink:href="sprite.svg#close"></use>
+						</svg>
+					</button>
+				</div>
+				`
+			);
+		};
+		if (document.querySelector('.mt')) {
+			document.querySelectorAll('.mt').forEach(item => {
+				item.remove();
+			});
+		}
+		resultsFilters.insertAdjacentHTML('beforeend', createChoiceItem(start, end));
 	});
 
 
