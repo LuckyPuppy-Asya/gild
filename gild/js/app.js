@@ -1349,6 +1349,7 @@ window.onload = function () {
 		}
 		//========================================================================================================================================================
 		if (targetElement.classList.contains('kitchen')) {
+
 			targetElement.querySelector('.cover').classList.add('_active');
 		}
 		if (targetElement.classList.contains('cover')) {
@@ -1357,12 +1358,7 @@ window.onload = function () {
 	}
 
 
-	if (window.innerWidth < 768) {
-		let x = document.querySelector('.custom-select__btn._current');
 
-		x.setAttribute('data-columns', '5');
-		console.log(x.dataset);
-	}
 
 
 }

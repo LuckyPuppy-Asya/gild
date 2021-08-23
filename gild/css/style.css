@@ -4105,13 +4105,13 @@ body.ie ._ibg img {
   letter-spacing: 0.02em;
   color: #fff;
   border-radius: 18px;
-  margin-bottom: 10px;
+  margin: 0px 0px 10px 0px;
 }
 
 .cover__learn {
   width: 142px;
   background-color: transparent;
-  height: 25px;
+  height: 37px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4423,6 +4423,12 @@ body.ie ._ibg img {
     font-size: 12px;
     margin-bottom: 7px;
     padding: 0px 10px;
+  }
+
+  [data-grid-columns="4"] .cover__learn {
+    width: 135px;
+    height: 25px;
+    font-size: 10px;
   }
 
   [data-grid-columns="4"] .kitchen {
@@ -5091,10 +5097,6 @@ body.ie ._ibg img {
   }
 
   .cover__btn {
-    width: calc(90px + 52 * ((100vw - 320px) / 880));
-  }
-
-  .cover__btn {
     height: calc(22px + 15 * ((100vw - 320px) / 880));
   }
 
@@ -5106,24 +5108,8 @@ body.ie ._ibg img {
     padding-left: calc(10px + 5 * ((100vw - 320px) / 880));
   }
 
-  .cover__btn {
-    font-size: calc(9px + 5 * ((100vw - 320px) / 880));
-  }
-
-  .cover__btn {
-    margin-bottom: calc(5px + 5 * ((100vw - 320px) / 880));
-  }
-
   .cover__learn {
-    width: calc(90px + 52 * ((100vw - 320px) / 880));
-  }
-
-  .cover__learn {
-    height: calc(13px + 12 * ((100vw - 320px) / 880));
-  }
-
-  .cover__learn {
-    font-size: calc(5px + 5 * ((100vw - 320px) / 880));
+    height: calc(22px + 15 * ((100vw - 320px) / 880));
   }
 
   .cover__learn {
@@ -5336,8 +5322,6 @@ body.ie ._ibg img {
   .kitchen__favorate {
     right: 6px;
     top: 6px;
-    width: 8px;
-    height: 7px;
   }
 }
 
@@ -5449,6 +5433,30 @@ body.ie ._ibg img {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
+  }
+
+  .cover__name {
+    -ms-flex-preferred-size: 40px;
+        flex-basis: 40px;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .cover__order {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .cover__btn {
+    height: 30px;
+    font-size: 14px;
+    margin: 0px 0px 15px 0px;
+  }
+
+  .cover__learn {
+    height: 30px;
+    font-size: 11px;
+    border-radius: 18px;
   }
 }
 

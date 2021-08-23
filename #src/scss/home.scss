@@ -1935,6 +1935,11 @@
 			margin-bottom: 7px;
 			padding: 0px 10px;
 		}
+		.cover__learn {
+			width: 135px;
+			height: 25px;
+			font-size: 10px;
+		}
 
 		.kitchen {
 			border-radius: 3px;
@@ -1973,14 +1978,12 @@
 		bottom: 0;
 		width: 100%;
 		min-height: 40px;
-		// @include adaptiv-value("height", 40, 25, 1);
 		@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
 			background: rgba(72, 72, 72, 0.71);
 			backdrop-filter: blur(1px);
 		}
 		border-radius: 0px 0px 2px 2px;
 		font-weight: 500;
-		// @include adaptiv-value("font-size", 15, 10, 1);
 		font-size: 15px;
 		line-height: 110%;
 		letter-spacing: 0.02em;
@@ -2023,8 +2026,6 @@
 		@media (max-width: $md3+px) {
 			right: 6px;
 			top: 6px;
-			width: 8px;
-			height: 7px;
 		}
 	}
 	@media (any-hover: hover) {
@@ -2058,6 +2059,11 @@
 		letter-spacing: 0.02em;
 		color: #f3f3f3;
 		@include adaptiv-value("margin-bottom", 17, 9, 1);
+		@media (max-width: $md4+px) {
+			flex-basis: 40px;
+			font-size: 18px;
+			margin-bottom: 15px;
+		}
 	}
 	// .cover__order
 	&__order {
@@ -2080,10 +2086,14 @@
 			height: 1px;
 			background-color: $yellowColor;
 		}
+		@media (max-width: $md4+px) {
+			font-size: 12px;
+			margin-bottom: 15px;
+		}
 	}
 	// .cover__btn
 	&__btn {
-		@include adaptiv-value("width", 142, 90, 1);
+		width: 142px;
 		background-color: $yellowColor;
 		@include adaptiv-value("height", 37, 22, 1);
 		display: flex;
@@ -2092,24 +2102,29 @@
 		text-align: center;
 		@include adaptiv-value("padding-right", 15, 10, 1);
 		@include adaptiv-value("padding-left", 15, 10, 1);
-		@include adaptiv-value("font-size", 14, 9, 1);
+		font-size: 14px;
 		line-height: 110%;
 		letter-spacing: 0.02em;
 		color: #fff;
 		border-radius: 18px;
-		@include adaptiv-value("margin-bottom", 10, 5, 1);
+		margin: 0px 0px 10px 0px;
+		@media (max-width: $md4+px) {
+			height: 30px;
+			font-size: 14px;
+			margin: 0px 0px 15px 0px;
+		}
 	}
 	// .cover__learn
 	&__learn {
-		@include adaptiv-value("width", 142, 90, 1);
+		width: 142px;
 		background-color: transparent;
-		@include adaptiv-value("height", 25, 13, 1);
+		@include adaptiv-value("height", 37, 22, 1);
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		text-align: center;
 		padding: 0px 10px;
-		@include adaptiv-value("font-size", 10, 5, 1);
+		font-size: 10px;
 		line-height: 110%;
 		letter-spacing: 0.02em;
 		color: #f3f3f3;
@@ -2119,6 +2134,11 @@
 		align-items: center;
 		span {
 			pointer-events: none;
+		}
+		@media (max-width: $md4+px) {
+			height: 30px;
+			font-size: 11px;
+			border-radius: 18px;
 		}
 	}
 
