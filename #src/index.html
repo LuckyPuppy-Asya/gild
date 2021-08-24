@@ -1146,7 +1146,7 @@
 											<div class="square__inputs">
 												<label class="square__label">
 													<input id="square-start" autocomplete="off" type="text" name="form[range_1_1]"
-														class="square__input input" data-value="4">
+														class="square__input input" data-value="0">
 													<span class="square__text">кв.м.&nbsp;&nbsp;&nbsp;-</span>
 												</label>
 												<label class="square__label">
@@ -1558,7 +1558,7 @@
 							</div>
 						</form>
 						<div class="catalog__exhibition exhibition">
-							<div class="catalog__streamer streamer">
+							<div class="exhibition__streamer streamer">
 								<div class="streamer__founded founded">
 									<div class="founded__text">Найдено:</div>
 									<div class="founded__qty">256</div>
@@ -1603,7 +1603,6 @@
 												<img src="img/exhibition/union.png" alt="">
 											</div>
 											<div class="sieve__dropdown">
-
 											</div>
 										</div>
 									</div>
@@ -1614,9 +1613,10 @@
 										<div class="custom-select__top">по умолчанию</div>
 										<div class="custom-select__dropdown">
 											<ul class="custom-select__list">
-												<li class="custom-select__item">по цене</li>
-												<li class="custom-select__item">по форме</li>
-												<li class="custom-select__item">по цвету</li>
+												<li class="custom-select__item">По возрастанию цены</li>
+												<li class="custom-select__item">По убыванию цены</li>
+												<li class="custom-select__item">Увеличение размера</li>
+												<li class="custom-select__item">Уменьшение размера</li>
 											</ul>
 										</div>
 									</div>
@@ -1675,15 +1675,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня МДФ в&nbsp;ПВХ &laquo;Модель&nbsp;154&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -1703,15 +1703,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня МДФ в&nbsp;ПВХ &laquo;Модель&nbsp;1&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -1731,15 +1731,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;ЛДСП &laquo;Модель&nbsp;176&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -1759,15 +1759,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня МДФ в&nbsp;эмали &laquo;Модель&nbsp;281&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -1787,15 +1787,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;акрила &laquo;Модель&nbsp;407&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -1815,15 +1815,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;шпона &laquo;Модель&nbsp;14&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -1843,15 +1843,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;акрила &laquo;Модель&nbsp;407&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -1871,15 +1871,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;акрила &laquo;Модель&nbsp;407&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -1899,15 +1899,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;акрила &laquo;Модель&nbsp;407&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -1927,15 +1927,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;акрила &laquo;Модель&nbsp;407&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -1955,15 +1955,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;акрила &laquo;Модель&nbsp;407&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -1983,15 +1983,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;акрила &laquo;Модель&nbsp;407&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -2011,15 +2011,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;акрила &laquo;Модель&nbsp;407&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -2039,15 +2039,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;акрила &laquo;Модель&nbsp;407&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -2067,15 +2067,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;акрила &laquo;Модель&nbsp;407&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -2095,15 +2095,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня МДФ в&nbsp;ПВХ &laquo;Модель&nbsp;154&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -2123,15 +2123,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня МДФ в&nbsp;ПВХ &laquo;Модель&nbsp;1&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -2151,15 +2151,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;ЛДСП &laquo;Модель&nbsp;176&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -2179,15 +2179,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня МДФ в&nbsp;эмали &laquo;Модель&nbsp;281&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -2207,15 +2207,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;акрила &laquo;Модель&nbsp;407&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -2235,15 +2235,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;шпона &laquo;Модель&nbsp;14&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -2263,15 +2263,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;акрила &laquo;Модель&nbsp;407&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -2291,15 +2291,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;акрила &laquo;Модель&nbsp;407&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -2319,15 +2319,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;акрила &laquo;Модель&nbsp;407&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -2347,15 +2347,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;акрила &laquo;Модель&nbsp;407&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -2375,15 +2375,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;акрила &laquo;Модель&nbsp;407&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -2403,15 +2403,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;акрила &laquo;Модель&nbsp;407&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -2431,15 +2431,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;акрила &laquo;Модель&nbsp;407&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -2459,15 +2459,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;акрила &laquo;Модель&nbsp;407&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -2487,15 +2487,15 @@
 										<div class="kitchen__cover cover">
 											<h4 class="cover__name">Кухня из&nbsp;акрила &laquo;Модель&nbsp;407&raquo;</h4>
 											<a href="" class="cover__order">Заказать кухню</a>
-											<button class="cover__btn" type="button">Расчет цены</button>
-											<button class="cover__learn" type="button">
+											<a href="#" class="cover__btn">Расчет цены</a>
+											<a href="#" class="cover__learn">
 												<span>Узнать подробнее</span>
 												<span class="cover__icon">
 													<svg>
 														<use xlink:href="sprite.svg#arrow-white"></use>
 													</svg>
 												</span>
-											</button>
+											</a>
 										</div>
 										<button type="button" class="kitchen__favorate">
 											<svg>
@@ -2505,6 +2505,8 @@
 									</article>
 								</li>
 							</ul>
+							<button class="exhibition__more">Показать еще 30 кухонь</button>
+							@@include('_pagging.html',{})
 						</div>
 					</div>
 				</div>

@@ -4,6 +4,38 @@
 	justify-content: center;
 	// .pagging__arrow
 	&__arrow {
+		margin: 0px 10px;
+		&_start,
+		&_end {
+			width: 14px;
+			height: 9px;
+			margin: 0px 20px;
+		}
+		&_start {
+			transform: rotate(-180deg);
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		&_left,
+		&_right {
+			width: 9px;
+			height: 9px;
+		}
+		&_left {
+			transform: rotate(90deg);
+			opacity: 0;
+			visibility: hidden;
+		}
+		&_right {
+			transform: rotate(-90deg);
+		}
+		svg {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 	}
 	// .pagging__list
 	&__list {
@@ -13,20 +45,20 @@
 	}
 	// .pagging__item
 	&__item {
-		width: 28px;
-		height: 28px;
+		width: 33px;
+		height: 31px;
 		display: flex;
-		font-weight: bold;
-		font-size: 14px;
-		// text-align: center;
-		color: #cfcfcf;
+		font-size: 16px;
+		line-height: 110%;
+		letter-spacing: 0.02em;
+		color: #575b5e;
 		justify-content: center;
 		align-items: center;
-		border: 2px solid #d0d0d0;
-		margin: 0px 5px;
+		margin: 0px 10px;
+		transition: all 0.3s ease 0s;
 		&._active {
-			border: 2px solid;
-			color: #87b0ee;
+			color: #fff;
+			background-color: $yellowColor;
 		}
 	}
 }

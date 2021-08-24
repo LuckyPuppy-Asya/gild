@@ -542,14 +542,9 @@ if (quantityButtons.length > 0) {
 const squareSlider = document.querySelector('.square__range');
 if (squareSlider) {
 
-	// let textFrom = priceSlider.getAttribute('data-from');
-	// let textTo = priceSlider.getAttribute('data-to');
-
 	noUiSlider.create(squareSlider, {
 		start: [0, 30],
 		connect: true,
-		// step: 1,
-		// tooltips: [wNumb({ decimals: 0, prefix: textFrom + ' ' }), wNumb({ decimals: 0, prefix: textTo + ' ' })],
 		tooltips: [wNumb({ decimals: 0 }), wNumb({ decimals: 0 })],
 		range: {
 			'min': [0],
@@ -614,14 +609,9 @@ if (squareSlider) {
 const metersSlider = document.querySelector('.meters__range');
 if (metersSlider) {
 
-	// let textFrom = priceSlider.getAttribute('data-from');
-	// let textTo = priceSlider.getAttribute('data-to');
-
 	noUiSlider.create(metersSlider, {
 		start: [0, 10],
 		connect: true,
-		// step: 1,
-		// tooltips: [wNumb({ decimals: 0, prefix: textFrom + ' ' }), wNumb({ decimals: 0, prefix: textTo + ' ' })],
 		tooltips: [wNumb({ decimals: 0 }), wNumb({ decimals: 0 })],
 		range: {
 			'min': [0],
@@ -632,8 +622,8 @@ if (metersSlider) {
 
 	const metersStart = document.getElementById('meters-start');
 	const metersEnd = document.getElementById('meters-end');
-
 	const metersInputs = [metersStart, metersEnd];
+
 	metersSlider.noUiSlider.on('update', function (values, handle) {
 		metersInputs[handle].value = Math.round(values[handle]);
 		let start = metersStart.value;

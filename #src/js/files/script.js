@@ -104,7 +104,7 @@ window.onload = function () {
 		}
 
 		//Работа кнопки Сбросить фильтры========================================================================================================================================================
-		if (targetElement.classList.contains('streamer__filters-reset')) {
+		if (targetElement.classList.contains('streamer__filters-reset') || targetElement.classList.contains('filters-catalog__clean')) {
 
 			squareSlider.noUiSlider.set([0, 30]);
 
@@ -112,7 +112,7 @@ window.onload = function () {
 			const squareEnd = document.getElementById('square-end');
 			const squareInputs = [squareStart, squareEnd];
 
-			squareSlider.noUiSlider.on('set', function (values, handle) {
+			squareSlider.noUiSlider.on('update', function (values, handle) {
 				squareInputs[handle].value = Math.round(values[handle]);
 			});
 
@@ -120,11 +120,58 @@ window.onload = function () {
 			const metersStart = document.getElementById('meters-start');
 			const metersEnd = document.getElementById('meters-end');
 			const metersInputs = [metersStart, metersEnd];
-			metersSlider.noUiSlider.on('set', function (values, handle) {
+			metersSlider.noUiSlider.on('update', function (values, handle) {
 				metersInputs[handle].value = Math.round(values[handle]);
 			});
 
 			document.querySelector('.filters-catalog__results').innerHTML = '';
+		}
+		//========================================================================================================================================================
+		if (targetElement.classList.contains('pagging__item')) {
+			if (targetElement.classList.contains('pagging__item_first', '_active')) {
+				document.querySelector('.pagging__arrow_start').style.cssText = `
+				opacity: 0;
+				visibility: hidden;
+				`;
+				document.querySelector('.pagging__arrow_left').style.cssText = `
+				opacity: 0;
+				visibility: hidden;
+				`;
+				document.querySelector('.pagging__arrow_end').style.cssText = `
+				opacity: 1;
+				visibility: visible;
+				`;
+				document.querySelector('.pagging__arrow_right').style.cssText = `
+				opacity: 1;
+				visibility: visible;
+				`;
+			} else if (targetElement.classList.contains('pagging__item_last', '_active')) {
+				document.querySelector('.pagging__arrow_end').style.cssText = `
+				opacity: 0;
+				visibility: hidden;
+				`;
+				document.querySelector('.pagging__arrow_right').style.cssText = `
+				opacity: 0;
+				visibility: hidden;
+				`;
+				document.querySelector('.pagging__arrow_start').style.cssText = `
+				opacity: 1;
+				visibility: visible;
+				`;
+				document.querySelector('.pagging__arrow_left').style.cssText = `
+				opacity: 1;
+				visibility: visible;
+				`;
+			} else {
+				document.querySelectorAll('.pagging__arrow').forEach(item => {
+					item.style.cssText = `
+						opacity: 1;
+						visibility: visible;
+					`;
+				});
+			}
+
+
 		}
 	}
 
@@ -193,6 +240,36 @@ window.onload = function () {
 
 
 	}
+	//========================================================================================================================================================
+
+	let x = `
+				<li class="exhibition__column">
+					<article class="exhibition__kitchen kitchen _ibg">
+						<div class="kitchen__image">
+							<picture><source srcset="img/exhibition/01.webp" type="image/webp"><img src="img/exhibition/01.png" alt=""></picture>
+						</div>
+						<h4 class="kitchen__bottom">Кухня МДФ в&nbsp;ПВХ «Модель&nbsp;154»</h4>
+						<div class="kitchen__cover cover">
+							<h4 class="cover__name">Кухня МДФ в&nbsp;ПВХ «Модель&nbsp;154»</h4>
+							<a href="#" class="cover__order">Заказать кухню</a>
+							<a href="#" class="cover__btn">Расчет цены</a>
+							<a href="#" class="cover__learn">
+								<span>Узнать подробнее</span>
+								<span class="cover__icon">
+									<svg>
+										<use xlink:href="sprite.svg#arrow-white"></use>
+									</svg>
+								</span>
+							</a>
+						</div>
+						<button type="button" class="kitchen__favorate">
+							<svg>
+								<use xlink:href="sprite.svg#heart"></use>
+							</svg>
+						</button>
+					</article>
+				</li>
+				`;
 	//========================================================================================================================================================
 
 
