@@ -357,6 +357,16 @@ body.ie {
 		display: block;
 	}
 }
+._tabs-inner {
+}
+._tabs-item-inner {
+}
+._tabs-block-inner {
+	display: none;
+	&._active {
+		display: block;
+	}
+}
 //=====================================================================================================================
 .mirror {
 	transform: scale(-1, 1);

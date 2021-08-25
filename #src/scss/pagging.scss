@@ -4,12 +4,15 @@
 	justify-content: center;
 	// .pagging__arrow
 	&__arrow {
-		margin: 0px 10px;
+		@include adaptiv-value("margin-right", 10, 5, 1);
+		@include adaptiv-value("margin-left", 10, 5, 1);
 		&_start,
 		&_end {
 			width: 14px;
 			height: 9px;
-			margin: 0px 20px;
+			// margin: 0px 20px;
+			@include adaptiv-value("margin-right", 20, 10, 1);
+			@include adaptiv-value("margin-left", 20, 10, 1);
 		}
 		&_start {
 			transform: rotate(-180deg);
@@ -54,11 +57,18 @@
 		color: #575b5e;
 		justify-content: center;
 		align-items: center;
-		margin: 0px 10px;
+		@include adaptiv-value("margin-right", 10, 5, 1);
+		@include adaptiv-value("margin-left", 10, 5, 1);
 		transition: all 0.3s ease 0s;
 		&._active {
 			color: #fff;
 			background-color: $yellowColor;
+			pointer-events: none;
+		}
+		@media (max-width: $md3+px) {
+			&_dn {
+				display: none;
+			}
 		}
 	}
 }
