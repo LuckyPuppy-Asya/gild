@@ -1275,7 +1275,7 @@ window.onload = function () {
 	// Actions (делегирование события click)
 	function documentActions(e) {
 		const targetElement = e.target;
-		// console.log(targetElement, 111);
+		console.log(targetElement, 111);
 
 		//по клику на желтые пункты на фото срабатывают табы========================================================================================================================================================
 
@@ -1285,7 +1285,7 @@ window.onload = function () {
 			neededBtn.click();
 		}
 
-		//переход по ссылкам меню с goto========================================================================================================================================================
+		//по клику переход по ссылкам меню с goto========================================================================================================================================================
 		if (targetElement.classList.contains('_simple-go') && targetElement.dataset.goto) {
 			if (document.querySelector(targetElement.dataset.goto)) {
 				const gotoBlock = document.querySelector(targetElement.dataset.goto);
@@ -1297,7 +1297,7 @@ window.onload = function () {
 				});
 			}
 		}
-		//работа фильтров "Сортировать" в блоке catalog========================================================================================================================================================
+		//по клику работа фильтров "Сортировать" в блоке catalog========================================================================================================================================================
 		if (targetElement.classList.contains('custom-select__top')) {
 			targetElement.closest('.custom-select').classList.toggle('custom-select--open');
 		}
@@ -1312,7 +1312,7 @@ window.onload = function () {
 			targetElement.closest('.custom-select').classList.toggle('custom-select--open');
 		}
 
-		//работа кнопок "Вид" в блоке catalog========================================================================================================================================================
+		//по клику работа кнопок "Вид" в блоке catalog========================================================================================================================================================
 		if (targetElement.classList.contains('custom-select__btn') && targetElement.closest('.custom-select__top')) {
 			targetElement.closest('.custom-select').classList.toggle('custom-select--open');
 		}
@@ -1332,7 +1332,7 @@ window.onload = function () {
 			targetElement.closest('.custom-select').classList.toggle('custom-select--open');
 			exhibitionRow.dataset.gridColumns = columns;
 		}
-		//на экранах ниже md2 открытие Сортировка и Фильтры========================================================================================================================================================
+		//по клику на экранах ниже md2 открытие Сортировка и Фильтры========================================================================================================================================================
 
 		if (targetElement.classList.contains('joint__top')) {
 			document.querySelector('.sieve__dropdown').classList.remove('_active');
@@ -1342,12 +1342,12 @@ window.onload = function () {
 			document.querySelector('.joint__dropdown').classList.remove('_active');
 			document.querySelector('.sieve__dropdown').classList.toggle('_active');
 		}
-		//закрытие фильтров по крестику на экранах ниже md2========================================================================================================================================================
+		//по клику закрытие фильтров по крестику на экранах ниже md2========================================================================================================================================================
 
 		if (targetElement.classList.contains('filters-catalog__btn')) {
 			document.querySelector('.sieve__dropdown').classList.remove('_active');
 		}
-		//На карточке накидывание покрывала========================================================================================================================================================
+		//по клику На карточке накидывание покрывала========================================================================================================================================================
 		if (targetElement.classList.contains('kitchen')) {
 
 			targetElement.querySelector('.cover').classList.add('_active');
@@ -1355,7 +1355,7 @@ window.onload = function () {
 		if (targetElement.classList.contains('cover')) {
 			targetElement.classList.remove('_active');
 		}
-		//При клике на крестике выбранного элемента в results-filters его удаление========================================================================================================================================================
+		//по клику на крестике выбранного элемента в results-filters его удаление========================================================================================================================================================
 
 		if (targetElement.classList.contains('results-filters__btn')) {
 			let resultsFiltersColumn = targetElement.closest('.results-filters__column');
@@ -1368,7 +1368,7 @@ window.onload = function () {
 			resultsFiltersColumn.remove();
 		}
 
-		//Работа кнопки Сбросить фильтры========================================================================================================================================================
+		//по клику Работа кнопки Сбросить фильтры========================================================================================================================================================
 		if (targetElement.classList.contains('streamer__filters-reset') || targetElement.classList.contains('filters-catalog__clean')) {
 
 			squareSlider.noUiSlider.set([0, 30]);
@@ -1391,56 +1391,84 @@ window.onload = function () {
 
 			document.querySelector('.filters-catalog__results').innerHTML = '';
 		}
-		//========================================================================================================================================================
-		if (targetElement.classList.contains('pagging__item')) {
-			if (targetElement.classList.contains('pagging__item_first', '_active')) {
-				document.querySelector('.pagging__arrow_start').style.cssText = `
-				opacity: 0;
-				visibility: hidden;
-				`;
-				document.querySelector('.pagging__arrow_left').style.cssText = `
-				opacity: 0;
-				visibility: hidden;
-				`;
-				document.querySelector('.pagging__arrow_end').style.cssText = `
-				opacity: 1;
-				visibility: visible;
-				`;
-				document.querySelector('.pagging__arrow_right').style.cssText = `
-				opacity: 1;
-				visibility: visible;
-				`;
-			} else if (targetElement.classList.contains('pagging__item_last', '_active')) {
-				document.querySelector('.pagging__arrow_end').style.cssText = `
-				opacity: 0;
-				visibility: hidden;
-				`;
-				document.querySelector('.pagging__arrow_right').style.cssText = `
-				opacity: 0;
-				visibility: hidden;
-				`;
-				document.querySelector('.pagging__arrow_start').style.cssText = `
-				opacity: 1;
-				visibility: visible;
-				`;
-				document.querySelector('.pagging__arrow_left').style.cssText = `
-				opacity: 1;
-				visibility: visible;
-				`;
-			} else {
-				document.querySelectorAll('.pagging__arrow').forEach(item => {
-					item.style.cssText = `
-						opacity: 1;
-						visibility: visible;
-					`;
-				});
-			}
+		//по клику изменения в отображении пагинации========================================================================================================================================================
+		// if (targetElement.classList.contains('pagging__item')) {
+		// 	if (targetElement.classList.contains('pagging__item_first', '_active')) {
+		// 		document.querySelector('.pagging__arrow_start').style.cssText = `
+		// 		opacity: 0;
+		// 		visibility: hidden;
+		// 		`;
+		// 		document.querySelector('.pagging__arrow_left').style.cssText = `
+		// 		opacity: 0;
+		// 		visibility: hidden;
+		// 		`;
+		// 		document.querySelector('.pagging__arrow_end').style.cssText = `
+		// 		opacity: 1;
+		// 		visibility: visible;
+		// 		`;
+		// 		document.querySelector('.pagging__arrow_right').style.cssText = `
+		// 		opacity: 1;
+		// 		visibility: visible;
+		// 		`;
+		// 	} else if (targetElement.classList.contains('pagging__item_last', '_active')) {
+		// 		document.querySelector('.pagging__arrow_end').style.cssText = `
+		// 		opacity: 0;
+		// 		visibility: hidden;
+		// 		`;
+		// 		document.querySelector('.pagging__arrow_right').style.cssText = `
+		// 		opacity: 0;
+		// 		visibility: hidden;
+		// 		`;
+		// 		document.querySelector('.pagging__arrow_start').style.cssText = `
+		// 		opacity: 1;
+		// 		visibility: visible;
+		// 		`;
+		// 		document.querySelector('.pagging__arrow_left').style.cssText = `
+		// 		opacity: 1;
+		// 		visibility: visible;
+		// 		`;
+		// 	} else {
+		// 		document.querySelectorAll('.pagging__arrow').forEach(item => {
+		// 			item.style.cssText = `
+		// 				opacity: 1;
+		// 				visibility: visible;
+		// 			`;
+		// 		});
+		// 	}
+		// }
+		//по клику на Посмотреть появляется controls========================================================================================================================================================
+		if (targetElement.classList.contains('demo__btn')) {
+			let videos = document.querySelectorAll('#video-player');
+			videos.forEach(video => {
+				if (!video.paused) {
+					video.removeAttribute('controls');
+					video.load();
+					video.closest('.demo__column').querySelector('.demo__btn').classList.remove('_hide');
+				}
 
-
+			});
+			let video = targetElement.closest('.demo__column').querySelector('#video-player');
+			video.setAttribute("controls", "true");
+			video.play();
+			targetElement.classList.add('_hide');
 		}
+
+
 	}
 
 
+	//если видео закончилось, то возвращаем как было========================================================================================================================================================
+
+	const videos = document.querySelectorAll('#video-player');
+	videos.forEach(video => {
+		video.addEventListener('timeupdate', function () {
+			if (video.duration == video.currentTime) {
+				video.removeAttribute('controls');
+				video.load();
+				video.closest('.demo__column').querySelector('.demo__btn').classList.remove('_hide');
+			}
+		});
+	});
 
 
 
@@ -1449,7 +1477,7 @@ window.onload = function () {
 	//из checkbox===================================
 	let checkboxItems = document.querySelectorAll('.checkbox__label');
 	let optionsItems = document.querySelectorAll('.options__item');
-	let rangeItems = document.querySelectorAll('.square__label');
+	// let rangeItems = document.querySelectorAll('.square__label');
 	let resultsFilters = document.querySelector('.results-filters');
 
 
@@ -1507,34 +1535,6 @@ window.onload = function () {
 	}
 	//========================================================================================================================================================
 
-	let x = `
-				<li class="exhibition__column">
-					<article class="exhibition__kitchen kitchen _ibg">
-						<div class="kitchen__image">
-							<picture><source srcset="img/exhibition/01.webp" type="image/webp"><img src="img/exhibition/01.png" alt=""></picture>
-						</div>
-						<h4 class="kitchen__bottom">Кухня МДФ в&nbsp;ПВХ «Модель&nbsp;154»</h4>
-						<div class="kitchen__cover cover">
-							<h4 class="cover__name">Кухня МДФ в&nbsp;ПВХ «Модель&nbsp;154»</h4>
-							<a href="#" class="cover__order">Заказать кухню</a>
-							<a href="#" class="cover__btn">Расчет цены</a>
-							<a href="#" class="cover__learn">
-								<span>Узнать подробнее</span>
-								<span class="cover__icon">
-									<svg>
-										<use xlink:href="sprite.svg#arrow-white"></use>
-									</svg>
-								</span>
-							</a>
-						</div>
-						<button type="button" class="kitchen__favorate">
-							<svg>
-								<use xlink:href="sprite.svg#heart"></use>
-							</svg>
-						</button>
-					</article>
-				</li>
-				`;
 	//========================================================================================================================================================
 
 
@@ -2214,4 +2214,5 @@ if (metersSlider) {
 
 }
 //========================================================================================================================================================
+
 

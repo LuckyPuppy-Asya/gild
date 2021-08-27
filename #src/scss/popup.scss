@@ -21,6 +21,9 @@
 		opacity: 0;
 		transition: opacity 0.8s ease 0s;
 	}
+	&_quiz::before {
+		background-color: #fff;
+	}
 	&.show {
 		visibility: visible;
 		overflow: auto;
@@ -67,6 +70,16 @@
 		background-color: $greenColor;
 		&_white {
 			background-color: #fff;
+		}
+		&_quiz {
+			background: linear-gradient(180.23deg, #ffffff 16.56%, rgba(255, 255, 255, 0.78) 72.99%);
+			box-shadow: 0px 4px 11px 3px rgba(0, 0, 0, 0.11);
+			border-radius: 12px;
+			@include adaptiv-value("padding-top", 23, 23, 1);
+			@include adaptiv-value("padding-right", 25, 25, 1);
+			@include adaptiv-value("padding-bottom", 14, 14, 1);
+			@include adaptiv-value("padding-left", 29, 29, 1);
+			@include adaptiv-value("max-width", 1200, 1200, 1);
 		}
 	}
 	// .popup__close
@@ -157,5 +170,105 @@
 		p {
 			margin: 0px 0px 15px 0px;
 		}
+	}
+}
+//========================================================================================================================================================
+.survey {
+	display: flex;
+	// .survey__left
+	&__left {
+		flex: 0 0 382px;
+	}
+	// .survey__right
+	&__right {
+		flex: 1 1 auto;
+	}
+}
+.left {
+	// .left__preamble
+	&__preamble {
+	}
+	// .left__resume
+	&__resume {
+	}
+}
+.preamble {
+	display: flex;
+	// .preamble__manager
+	&__manager {
+		flex: 0 0 163px;
+	}
+	// .preamble__avatar
+	&__avatar {
+		width: 100%;
+		border-radius: 50%;
+	}
+	// .preamble__name
+	&__name {
+		background: linear-gradient(15.52deg, #2ab359 7.93%, #97fcc5 89.95%);
+		border-radius: 4px;
+		height: 28px;
+		width: 131px;
+		font-weight: 700;
+		font-size: 11px;
+		line-height: 119%;
+		color: #ffffff;
+	}
+	// .preamble__position
+	&__position {
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.84) 0%, rgba(254, 255, 251, 0.5964) 100%);
+		border-radius: 4px;
+		width: 107px;
+		height: 38px;
+		font-size: 11px;
+		line-height: 140%;
+		display: flex;
+		text-align: center;
+		color: #575b5e;
+		border: 1px solid $yellowColor;
+	}
+	// .preamble__quote
+	&__quote {
+		flex: 1 1 auto;
+	}
+}
+.resume {
+	// .resume__header
+	&__header {
+	}
+	// .resume__title
+	&__title {
+	}
+	// .resume__image
+	&__image {
+	}
+	// .resume__body
+	&__body {
+	}
+	// .resume__column
+	&__column {
+	}
+	// .resume__option
+	&__option {
+	}
+	// .resume__label
+	&__label {
+	}
+	// .resume__data
+	&__data {
+	}
+	// .resume__footer
+	&__footer {
+	}
+	// .resume__under
+	&__under {
+	}
+}
+.under {
+	// .under__icon
+	&__icon {
+	}
+	// .under__text
+	&__text {
 	}
 }
